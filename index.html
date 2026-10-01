@@ -10,11 +10,6 @@
 
 <style>
 
-/* =========================================================
-   WILLIAN SANTOS — V3
-   Editorial / Contemporary Art
-========================================================= */
-
 :root {
     --paper: #f2f0eb;
     --ink: #11110f;
@@ -52,9 +47,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 .header {
     position: fixed;
@@ -95,9 +90,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
     min-height: 100vh;
@@ -115,7 +110,6 @@ img {
 .hero-image {
     width: 100%;
     height: 94vh;
-
     overflow: hidden;
 }
 
@@ -124,25 +118,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: center;
-}
-
-.hero-word {
-    position: absolute;
-
-    left: 28px;
-    bottom: 28px;
-
-    color: white;
-
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(60px, 11vw, 175px);
-    line-height: .78;
-
-    letter-spacing: -.065em;
-
-    mix-blend-mode: difference;
-
-    pointer-events: none;
 }
 
 .hero-meta {
@@ -163,13 +138,12 @@ img {
 }
 
 
-/* =========================================================
-   OPENING STATEMENT
-========================================================= */
+/* =========================
+   STATEMENT
+========================= */
 
 .statement {
-    padding: 210px 7vw 240px;
-
+    padding: 190px 7vw 220px;
     border-bottom: 1px solid var(--line);
 }
 
@@ -201,9 +175,9 @@ img {
 }
 
 
-/* =========================================================
-   WORKS INTRO
-========================================================= */
+/* =========================
+   WORKS
+========================= */
 
 .works-intro {
     padding: 35px 28px;
@@ -222,105 +196,78 @@ img {
     color: var(--soft);
 }
 
-
-/* =========================================================
-   VIEWING ROOM
-========================================================= */
-
 .viewing-room {
-    padding: 120px 28px 230px;
+    padding: 110px 28px 210px;
 }
 
-.work {
+.works {
     max-width: var(--max);
-    margin: 0 auto 240px;
+    margin: 0 auto;
 }
 
-.work-image {
+.work-large {
+    width: 76%;
+    margin-left: 12%;
+    margin-bottom: 150px;
+}
+
+.work-large-image {
+    aspect-ratio: 4 / 3;
     overflow: hidden;
 }
 
-.work-image img {
-    transition: transform 1s cubic-bezier(.2,.6,.2,1);
+.work-large-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .8s ease;
 }
 
-.work:hover .work-image img {
-    transform: scale(1.018);
+.work:hover img {
+    transform: scale(1.015);
 }
 
-.work-details {
+.work-info {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
 
     padding-top: 13px;
 
-    font-size: 10px;
-    letter-spacing: .04em;
+    font-size: 11px;
 }
 
-.work-details .year {
+.work-info .muted {
     color: var(--soft);
 }
 
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
 
-/* PÉLAGOS */
-
-.work-pelagos {
-    width: 78%;
-    margin-left: 7%;
+    align-items: start;
 }
 
-.work-pelagos .work-image {
-    aspect-ratio: 1.42 / 1;
-}
-
-.work-pelagos img {
+.work-small img {
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1 / 1;
     object-fit: cover;
+
+    transition: transform .8s ease;
+}
+
+.work-small:nth-child(2) {
+    margin-top: 110px;
+}
+
+.work-small:nth-child(2) img {
+    aspect-ratio: 4 / 5;
 }
 
 
-/* VÉSPER */
-
-.work-vesper {
-    width: 48%;
-    margin-left: 39%;
-}
-
-.work-vesper .work-image {
-    aspect-ratio: .82 / 1;
-}
-
-.work-vesper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* AB LUIR */
-
-.work-abluir {
-    width: 67%;
-    margin-left: 17%;
-}
-
-.work-abluir .work-image {
-    aspect-ratio: 1 / .82;
-}
-
-.work-abluir img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-/* =========================================================
-   RESEARCH — DARK INTERRUPTION
-========================================================= */
+/* =========================
+   RESEARCH
+========================= */
 
 .research {
     background: var(--dark);
@@ -338,7 +285,7 @@ img {
     display: flex;
     justify-content: space-between;
 
-    margin-bottom: 115px;
+    margin-bottom: 110px;
 
     font-size: 10px;
     text-transform: uppercase;
@@ -359,12 +306,11 @@ img {
 
     letter-spacing: -.05em;
 
-    margin-bottom: 110px;
+    margin-bottom: 105px;
 }
 
 .research-body {
     margin-left: 25%;
-
     max-width: 570px;
 
     font-size: 13px;
@@ -378,12 +324,12 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    PROCESS
-========================================================= */
+========================= */
 
 .process {
-    padding: 190px 28px 220px;
+    padding: 180px 28px 210px;
 }
 
 .process-grid {
@@ -391,22 +337,18 @@ img {
     margin: auto;
 
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1.1fr .9fr;
 
-    gap: 11vw;
-}
-
-.process-image {
-    align-self: start;
+    gap: 8vw;
 }
 
 .process-image img {
-    aspect-ratio: 1.15 / 1;
+    aspect-ratio: 4 / 3;
     object-fit: cover;
 }
 
 .process-text {
-    padding-top: 25px;
+    padding-top: 15px;
 }
 
 .process-label {
@@ -416,7 +358,7 @@ img {
 
     color: var(--soft);
 
-    margin-bottom: 60px;
+    margin-bottom: 55px;
 }
 
 .process-title {
@@ -427,7 +369,7 @@ img {
 
     letter-spacing: -.045em;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
 .process-text p {
@@ -440,9 +382,9 @@ img {
 }
 
 
-/* =========================================================
-   BIOGRAPHY
-========================================================= */
+/* =========================
+   ABOUT
+========================= */
 
 .bio {
     border-top: 1px solid var(--line);
@@ -481,7 +423,7 @@ img {
 }
 
 .bio-facts {
-    margin-top: 90px;
+    margin-top: 80px;
 
     border-top: 1px solid var(--line);
 }
@@ -502,9 +444,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    CONTACT
-========================================================= */
+========================= */
 
 .contact {
     min-height: 100vh;
@@ -542,13 +484,25 @@ img {
 
     letter-spacing: -.07em;
 
-    margin-bottom: 100px;
+    margin-bottom: 90px;
 }
 
 .contact-email {
     font-size: 14px;
 
     display: inline-block;
+
+    border-bottom: 1px solid rgba(242,240,235,.45);
+
+    padding-bottom: 6px;
+}
+
+.contact-instagram {
+    display: inline-block;
+
+    margin-left: 35px;
+
+    font-size: 14px;
 
     border-bottom: 1px solid rgba(242,240,235,.45);
 
@@ -569,9 +523,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    MOBILE
-========================================================= */
+========================= */
 
 @media (max-width: 800px) {
 
@@ -589,12 +543,6 @@ img {
 
     .hero-image {
         height: 91vh;
-    }
-
-    .hero-word {
-        left: 18px;
-        bottom: 28px;
-        font-size: 22vw;
     }
 
     .hero-meta {
@@ -624,21 +572,19 @@ img {
         padding: 80px 18px 120px;
     }
 
-    .work {
-        margin-bottom: 120px;
-    }
-
-    .work-pelagos,
-    .work-vesper,
-    .work-abluir {
+    .work-large {
         width: 100%;
         margin-left: 0;
+        margin-bottom: 90px;
     }
 
-    .work-pelagos .work-image,
-    .work-vesper .work-image,
-    .work-abluir .work-image {
-        aspect-ratio: 1 / 1;
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .work-small:nth-child(2) {
+        margin-top: 0;
     }
 
     .research {
@@ -664,11 +610,7 @@ img {
 
     .process-grid {
         grid-template-columns: 1fr;
-        gap: 70px;
-    }
-
-    .process-text {
-        padding-top: 0;
+        gap: 65px;
     }
 
     .process-title {
@@ -697,9 +639,18 @@ img {
         font-size: 21vw;
     }
 
+    .contact-email,
+    .contact-instagram {
+        display: block;
+        width: fit-content;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+
     .contact-bottom {
         gap: 15px;
     }
+
 }
 
 </style>
@@ -708,9 +659,6 @@ img {
 
 <body>
 
-<!-- ======================================================
-     HEADER
-====================================================== -->
 
 <header class="header">
 
@@ -731,23 +679,15 @@ img {
 <main id="top">
 
 
-<!-- ======================================================
-     HERO
-====================================================== -->
+<!-- HERO -->
 
 <section class="hero">
 
     <div class="hero-image">
-
         <img
             src="Studio_inprogress.jpg"
             alt="Willian Santos — Studio"
         >
-
-    </div>
-
-    <div class="hero-word">
-        WILLiAN
     </div>
 
     <div class="hero-meta">
@@ -759,9 +699,7 @@ img {
 </section>
 
 
-<!-- ======================================================
-     STATEMENT
-====================================================== -->
+<!-- STATEMENT -->
 
 <section class="statement">
 
@@ -780,9 +718,7 @@ img {
 </section>
 
 
-<!-- ======================================================
-     WORKS HEADER
-====================================================== -->
+<!-- WORKS -->
 
 <div class="works-intro" id="works">
 
@@ -797,103 +733,96 @@ img {
 </div>
 
 
-<!-- ======================================================
-     VIEWING ROOM
-====================================================== -->
-
 <section class="viewing-room">
 
+    <div class="works">
 
-    <!-- PÉLAGOS -->
 
-    <article class="work work-pelagos">
+        <!-- PÉLAGOS -->
 
-        <div class="work-image">
+        <article class="work work-large">
 
-            <img
-                src="pelagos-1.jpg"
-                alt="Pélagos, 2026 — Willian Santos"
-            >
+            <div class="work-large-image">
+
+                <img
+                    src="pelagos-1.jpg"
+                    alt="Pélagos — Willian Santos"
+                >
+
+            </div>
+
+            <div class="work-info">
+
+                <span>
+                    Pélagos
+                </span>
+
+                <span class="muted">
+                    2026
+                </span>
+
+            </div>
+
+        </article>
+
+
+        <!-- VÉSPER + AB LUIR -->
+
+        <div class="work-grid">
+
+
+            <article class="work work-small">
+
+                <img
+                    src="vesper-25.jpg"
+                    alt="Vésper — Willian Santos"
+                >
+
+                <div class="work-info">
+
+                    <span>
+                        Vésper
+                    </span>
+
+                    <span class="muted">
+                        2025
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <article class="work work-small">
+
+                <img
+                    src="abluir-26.jpg"
+                    alt="Abluir — Willian Santos"
+                >
+
+                <div class="work-info">
+
+                    <span>
+                        Abluir
+                    </span>
+
+                    <span class="muted">
+                        2026
+                    </span>
+
+                </div>
+
+            </article>
+
 
         </div>
 
-        <div class="work-details">
-
-            <span>
-                Pélagos
-            </span>
-
-            <span class="year">
-                2026
-            </span>
-
-        </div>
-
-    </article>
-
-
-    <!-- VÉSPER -->
-
-    <article class="work work-vesper">
-
-        <div class="work-image">
-
-            <img
-                src="vesper-25.jpg"
-                alt="Vésper, 2025 — Willian Santos"
-            >
-
-        </div>
-
-        <div class="work-details">
-
-            <span>
-                Vésper
-            </span>
-
-            <span class="year">
-                2025
-            </span>
-
-        </div>
-
-    </article>
-
-
-    <!-- AB LUIR -->
-
-    <article class="work work-abluir">
-
-        <div class="work-image">
-
-            <img
-                src="abluir-26.jpg"
-                alt="Abluir, 2026 — Willian Santos"
-            >
-
-        </div>
-
-        <div class="work-details">
-
-            <span>
-                Abluir
-            </span>
-
-            <span class="year">
-                2026
-            </span>
-
-        </div>
-
-    </article>
-
+    </div>
 
 </section>
 
 
-<!-- ======================================================
-     RESEARCH
-====================================================== -->
+<!-- RESEARCH -->
 
 <section class="research" id="research">
 
@@ -938,9 +867,7 @@ img {
 </section>
 
 
-<!-- ======================================================
-     PROCESS
-====================================================== -->
+<!-- PROCESS -->
 
 <section class="process">
 
@@ -985,9 +912,7 @@ img {
 </section>
 
 
-<!-- ======================================================
-     ABOUT
-====================================================== -->
+<!-- ABOUT -->
 
 <section class="bio" id="about">
 
@@ -1076,9 +1001,7 @@ img {
 </section>
 
 
-<!-- ======================================================
-     CONTACT
-====================================================== -->
+<!-- CONTACT -->
 
 <section class="contact" id="contact">
 
@@ -1102,11 +1025,21 @@ img {
             talk.
         </h2>
 
+
         <a
             class="contact-email"
-            href="mailto:contato@williansantos.com"
+            href="mailto:contact@williansantos.com"
         >
-            contato@williansantos.com
+            contact@williansantos.com
+        </a>
+
+
+        <a
+            class="contact-instagram"
+            href="https://www.instagram.com/williansantos_studio/"
+            target="_blank"
+        >
+            Instagram
         </a>
 
     </div>
@@ -1123,10 +1056,10 @@ img {
         </span>
 
         <a
-            href="https://www.instagram.com/williansantos.art/"
+            href="https://www.instagram.com/williansantos_studio/"
             target="_blank"
         >
-            Instagram
+            @williansantos_studio
         </a>
 
     </div>
