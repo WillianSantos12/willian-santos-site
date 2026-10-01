@@ -9,659 +9,477 @@
 <meta name="description" content="Willian Santos is a visual artist based in Florianópolis, Brazil. His practice investigates painting, water, matter, ecosystems and perception.">
 
 <style>
+*{box-sizing:border-box;margin:0;padding:0}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+html{scroll-behavior:smooth}
+
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f3ef;
+color:#111;
+line-height:1.4;
 }
 
-html {
-    scroll-behavior: smooth;
+a{color:inherit;text-decoration:none}
+
+img{display:block;width:100%;height:auto}
+
+header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+padding:22px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:rgba(244,243,239,.94);
+z-index:1000;
+border-bottom:1px solid rgba(0,0,0,.08);
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f4f3ef;
-    color: #111;
-    line-height: 1.4;
+.logo{
+font-size:15px;
+font-weight:600;
+letter-spacing:.08em;
 }
 
-a {
-    color: inherit;
-    text-decoration: none;
+nav{
+display:flex;
+gap:28px;
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.08em;
 }
 
-img {
-    display: block;
-    width: 100%;
-    height: auto;
+nav a{transition:opacity .2s}
+nav a:hover{opacity:.45}
+
+section{padding:120px 40px}
+
+.container{
+max-width:1400px;
+margin:0 auto;
 }
 
-/* HEADER */
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 24px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: rgba(244,243,239,0.94);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
+.hero{
+min-height:100vh;
+padding:105px 40px 35px;
+display:flex;
+align-items:flex-end;
 }
 
-.logo {
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: 0.08em;
+.hero-image{
+width:100%;
+height:calc(100vh - 150px);
+object-fit:cover;
 }
 
-nav {
-    display: flex;
-    gap: 28px;
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.hero-caption{
+margin-top:12px;
+display:flex;
+justify-content:space-between;
+font-size:11px;
+text-transform:uppercase;
+letter-spacing:.08em;
 }
 
-nav a:hover {
-    opacity: 0.5;
+.intro{
+padding-top:170px;
+padding-bottom:180px;
 }
 
-/* GENERAL */
-
-section {
-    padding: 120px 40px;
+.intro-text{
+max-width:1120px;
+font-size:clamp(34px,5vw,74px);
+line-height:1.02;
+letter-spacing:-.04em;
 }
 
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
+.section-header{
+display:flex;
+justify-content:space-between;
+align-items:baseline;
+margin-bottom:48px;
+border-top:1px solid #111;
+padding-top:11px;
 }
 
-/* HERO */
-
-.hero {
-    min-height: 100vh;
-    padding: 110px 40px 40px;
-    display: flex;
-    align-items: flex-end;
+.section-title{
+font-size:12px;
+text-transform:uppercase;
+letter-spacing:.08em;
 }
 
-.hero-image {
-    width: 100%;
-    height: calc(100vh - 150px);
-    object-fit: cover;
+.works-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:85px 35px;
 }
 
-.hero-caption {
-    margin-top: 14px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.work-image{
+background:#e8e7e2;
+overflow:hidden;
 }
 
-/* INTRO */
-
-.intro {
-    padding-top: 160px;
-    padding-bottom: 160px;
+.work-image img{
+aspect-ratio:4/3;
+object-fit:cover;
+transition:transform .6s ease;
 }
 
-.intro-text {
-    max-width: 1100px;
-    font-size: clamp(32px, 5vw, 72px);
-    line-height: 1.05;
-    letter-spacing: -0.035em;
+.work-image:hover img{transform:scale(1.015)}
+
+.work-info{
+padding-top:11px;
+display:flex;
+justify-content:space-between;
+font-size:11px;
 }
 
-/* SECTION TITLE */
-
-.section-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    margin-bottom: 50px;
-    border-top: 1px solid #111;
-    padding-top: 12px;
+.work-title{
+text-transform:uppercase;
+letter-spacing:.05em;
 }
 
-.section-title {
-    font-size: 13px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
+.research{
+padding-top:190px;
+padding-bottom:190px;
 }
 
-/* WORKS */
-
-.works-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 80px 35px;
+.research-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:90px;
 }
 
-.work-image {
-    background: #e8e7e2;
-    overflow: hidden;
+.research-lead{
+font-size:clamp(29px,3.6vw,53px);
+line-height:1.07;
+letter-spacing:-.027em;
 }
 
-.work-image img {
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-    transition: transform 0.6s ease;
+.research-text{
+font-size:17px;
+line-height:1.6;
+max-width:590px;
 }
 
-.work-image:hover img {
-    transform: scale(1.015);
+.research-text p{margin-bottom:28px}
+
+.studio{padding-top:0}
+
+.studio-image{
+width:100%;
+max-height:82vh;
+object-fit:cover;
 }
 
-.work-info {
-    padding-top: 12px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 12px;
+.about-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:90px;
 }
 
-.work-title {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+.about-title{
+font-size:clamp(34px,4vw,60px);
+line-height:1.03;
+letter-spacing:-.03em;
 }
 
-/* RESEARCH */
-
-.research {
-    padding-top: 180px;
-    padding-bottom: 180px;
+.about-text{
+font-size:17px;
+line-height:1.6;
+max-width:590px;
 }
 
-.research-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+.about-text p{margin-bottom:28px}
+
+.contact{
+padding-bottom:190px;
 }
 
-.research-lead {
-    font-size: clamp(28px, 3.5vw, 52px);
-    line-height: 1.08;
-    letter-spacing: -0.025em;
+.contact-title{
+font-size:clamp(44px,7vw,105px);
+line-height:.94;
+letter-spacing:-.055em;
+margin-bottom:60px;
 }
 
-.research-text {
-    font-size: 18px;
-    line-height: 1.55;
-    max-width: 600px;
+.contact-links{
+display:flex;
+gap:35px;
+font-size:13px;
 }
 
-.research-text p {
-    margin-bottom: 28px;
+.contact-links a{
+border-bottom:1px solid #111;
+padding-bottom:4px;
 }
 
-/* STUDIO */
-
-.studio {
-    padding-top: 0;
+footer{
+border-top:1px solid #111;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+font-size:10px;
+text-transform:uppercase;
+letter-spacing:.08em;
 }
 
-.studio-image {
-    width: 100%;
-    max-height: 80vh;
-    object-fit: cover;
+@media(max-width:800px){
+
+header{padding:18px 20px}
+
+nav{
+gap:13px;
+font-size:9px;
 }
 
-/* ABOUT */
+section{padding:80px 20px}
 
-.about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+.hero{
+padding:85px 20px 20px;
 }
 
-.about-title {
-    font-size: clamp(32px, 4vw, 60px);
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+.hero-image{
+height:70vh;
 }
 
-.about-text {
-    font-size: 18px;
-    line-height: 1.55;
-    max-width: 600px;
+.hero-caption{
+font-size:9px;
 }
 
-.about-text p {
-    margin-bottom: 28px;
+.works-grid,
+.research-grid,
+.about-grid{
+grid-template-columns:1fr;
+gap:55px;
 }
 
-/* CONTACT */
+.works-grid{gap:65px}
 
-.contact {
-    padding-bottom: 180px;
+.intro{
+padding-top:105px;
+padding-bottom:110px;
 }
 
-.contact-title {
-    font-size: clamp(40px, 7vw, 100px);
-    line-height: 0.95;
-    letter-spacing: -0.05em;
-    margin-bottom: 60px;
+.research{
+padding-top:110px;
+padding-bottom:110px;
 }
 
-.contact-links {
-    display: flex;
-    gap: 35px;
-    font-size: 14px;
+.contact{
+padding-bottom:110px;
 }
 
-.contact-links a {
-    border-bottom: 1px solid #111;
-    padding-bottom: 4px;
-}
-
-/* FOOTER */
-
-footer {
-    border-top: 1px solid #111;
-    padding: 20px 40px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-    header {
-        padding: 20px;
-    }
-
-    nav {
-        gap: 15px;
-        font-size: 10px;
-    }
-
-    section {
-        padding: 80px 20px;
-    }
-
-    .hero {
-        padding: 90px 20px 20px;
-    }
-
-    .hero-image {
-        height: 70vh;
-    }
-
-    .works-grid,
-    .research-grid,
-    .about-grid {
-        grid-template-columns: 1fr;
-        gap: 50px;
-    }
-
-    .works-grid {
-        gap: 60px;
-    }
-
-    .intro {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    .research {
-        padding-top: 100px;
-        padding-bottom: 100px;
-    }
-
-    .contact {
-        padding-bottom: 100px;
-    }
-
-    footer {
-        padding: 20px;
-    }
+footer{padding:18px 20px}
 
 }
-
 </style>
 </head>
 
 <body>
 
 <header>
+<div class="logo">WILLIAN SANTOS</div>
 
-    <div class="logo">
-        WILLIAN SANTOS
-    </div>
-
-    <nav>
-        <a href="#works">Works</a>
-        <a href="#research">Research</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
+<nav>
+<a href="#works">Works</a>
+<a href="#research">Research</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
-
-<!-- HERO -->
-
 <section class="hero">
+<div class="container">
 
-    <div class="container">
+<img
+class="hero-image"
+src="Studio_inprogress.jpg"
+alt="Willian Santos studio"
+>
 
-        <img
-            class="hero-image"
-            src="Studio_inprogress.jpg"
-            alt="Willian Santos studio"
-        >
+<div class="hero-caption">
+<span>Visual Artist</span>
+<span>Florianópolis — Brazil</span>
+</div>
 
-        <div class="hero-caption">
-            <span>Visual Artist</span>
-            <span>Florianópolis — Brazil</span>
-        </div>
-
-    </div>
-
+</div>
 </section>
-
-
-<!-- INTRO -->
 
 <section class="intro">
+<div class="container">
 
-    <div class="container">
+<div class="intro-text">
+Painting as a field of material transformation, perception and the forces that sustain life.
+</div>
 
-        <div class="intro-text">
-            Painting as a field of material transformation, perception and the forces that sustain life.
-        </div>
-
-    </div>
-
+</div>
 </section>
-
-
-<!-- WORKS -->
 
 <section id="works">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-title">Selected Works</div>
+<div class="section-title">2025—2026</div>
+</div>
 
-        <div class="section-header">
-            <div class="section-title">Selected Works</div>
-            <div class="section-title">2025—2026</div>
-        </div>
+<div class="works-grid">
 
+<article>
+<div class="work-image">
+<img src="pelagos-1.jpg" alt="Pélagos I, 2026">
+</div>
+<div class="work-info">
+<span class="work-title">Pélagos I</span>
+<span>2026</span>
+</div>
+</article>
 
-        <div class="works-grid">
+<article>
+<div class="work-image">
+<img src="vesper-25.jpg" alt="Vésper, 2025">
+</div>
+<div class="work-info">
+<span class="work-title">Vésper</span>
+<span>2025</span>
+</div>
+</article>
 
+<article>
+<div class="work-image">
+<img src="abluir-26.jpg" alt="Abluir, 2026">
+</div>
+<div class="work-info">
+<span class="work-title">Abluir</span>
+<span>2026</span>
+</div>
+</article>
 
-            <article>
+<article>
+<div class="work-image">
+<img src="Studio_inprogress.jpg" alt="Studio — Work in Progress">
+</div>
+<div class="work-info">
+<span class="work-title">Studio — Work in Progress</span>
+<span>2026</span>
+</div>
+</article>
 
-                <div class="work-image">
-
-                    <img
-                        src="pelagos-1.jpg"
-                        alt="Pélagos I, 2026"
-                    >
-
-                </div>
-
-                <div class="work-info">
-
-                    <span class="work-title">
-                        Pélagos I
-                    </span>
-
-                    <span>
-                        2026
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <div class="work-image">
-
-                    <img
-                        src="vesper-25.jpg"
-                        alt="Vésper, 2025"
-                    >
-
-                </div>
-
-                <div class="work-info">
-
-                    <span class="work-title">
-                        Vésper
-                    </span>
-
-                    <span>
-                        2025
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <div class="work-image">
-
-                    <img
-                        src="abluir-26.jpg"
-                        alt="Abluir, 2026"
-                    >
-
-                </div>
-
-                <div class="work-info">
-
-                    <span class="work-title">
-                        Abluir
-                    </span>
-
-                    <span>
-                        2026
-                    </span>
-
-                </div>
-
-            </article>
-
-
-            <article>
-
-                <div class="work-image">
-
-                    <img
-                        src="Studio_inprogress.jpg"
-                        alt="Studio, work in progress"
-                    >
-
-                </div>
-
-                <div class="work-info">
-
-                    <span class="work-title">
-                        Studio — Work in Progress
-                    </span>
-
-                    <span>
-                        2026
-                    </span>
-
-                </div>
-
-            </article>
-
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
-
-<!-- RESEARCH -->
 
 <section id="research" class="research">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-title">Research</div>
+</div>
 
-        <div class="section-header">
-            <div class="section-title">Research</div>
-        </div>
+<div class="research-grid">
 
+<div class="research-lead">
+My research investigates the alchemy of water, matter and environment, approaching painting as a field in which visible and invisible forces become perceptible.
+</div>
 
-        <div class="research-grid">
+<div class="research-text">
 
-            <div class="research-lead">
+<p>
+Water occupies a central position in this investigation — from its surfaces and movements to the greater densities and depths of the oceans.
+</p>
 
-                My research investigates the alchemy of water, matter and environment, approaching painting as a field in which visible and invisible forces become perceptible.
+<p>
+Rather than representing a specific landscape, the work approaches the mystery of life through material processes, perception and the transformation of matter.
+</p>
 
-            </div>
+<p>
+Layers of paint are built, transformed, obscured and revealed. The process becomes a way of following the eye and the heart, allowing matter itself to participate in the construction of the image.
+</p>
 
-
-            <div class="research-text">
-
-                <p>
-                    Water occupies a central position in this investigation — from its surfaces and movements to the greater densities and depths of the oceans.
-                </p>
-
-                <p>
-                    Rather than representing a specific landscape, the work approaches the mystery of life through material processes, perception and the transformation of matter.
-                </p>
-
-                <p>
-                    Layers of paint are built, transformed, obscured and revealed. The process becomes a way of following the eye and the heart, allowing matter itself to participate in the construction of the image.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
-
-
-<!-- STUDIO -->
 
 <section class="studio">
+<div class="container">
 
-    <div class="container">
+<img
+class="studio-image"
+src="Studio_inprogress.jpg"
+alt="Willian Santos studio"
+>
 
-        <img
-            class="studio-image"
-            src="Studio_inprogress.jpg"
-            alt="Willian Santos studio"
-        >
-
-    </div>
-
+</div>
 </section>
-
-
-<!-- ABOUT -->
 
 <section id="about">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-title">About</div>
+</div>
 
-        <div class="section-header">
-            <div class="section-title">About</div>
-        </div>
+<div class="about-grid">
 
+<div class="about-title">
+Willian Santos
+</div>
 
-        <div class="about-grid">
+<div class="about-text">
 
-            <div class="about-title">
+<p>
+Willian Santos (Curitiba, Brazil, 1985) is a visual artist based in Florianópolis, Brazil. He holds a Bachelor's degree in Visual Arts from Universidade Tuiuti do Paraná, completed in 2009.
+</p>
 
-                Willian Santos
+<p>
+His practice encompasses painting, encaustic, acrylic, spray paint and installation, with an ongoing investigation into material transformation, water, ecosystems and the relationship between perception and the environment.
+</p>
 
-            </div>
+<p>
+Since 2009, encaustic has been an important part of his material research, alongside contemporary painting processes that combine accumulation, removal and transformation.
+</p>
 
-
-            <div class="about-text">
-
-                <p>
-                    Willian Santos (Curitiba, Brazil, 1985) is a visual artist based in Florianópolis, Brazil. He holds a Bachelor's degree in Visual Arts from Universidade Tuiuti do Paraná, completed in 2009.
-                </p>
-
-                <p>
-                    His practice encompasses painting, encaustic, acrylic, spray paint and installation, with an ongoing investigation into material transformation, water, ecosystems and the relationship between perception and the environment.
-                </p>
-
-                <p>
-                    Since 2009, encaustic has been an important part of his material research, alongside contemporary painting processes that combine accumulation, removal and transformation.
-                </p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
+</div>
 </section>
-
-
-<!-- CONTACT -->
 
 <section id="contact" class="contact">
+<div class="container">
 
-    <div class="container">
+<div class="section-header">
+<div class="section-title">Contact</div>
+</div>
 
-        <div class="section-header">
-            <div class="section-title">Contact</div>
-        </div>
+<div class="contact-title">
+Get in touch.
+</div>
 
+<div class="contact-links">
 
-        <div class="contact-title">
-            Get in touch.
-        </div>
+<a href="mailto:contato@williansantos.com">
+Email
+</a>
 
+<a href="https://www.instagram.com/" target="_blank">
+Instagram
+</a>
 
-        <div class="contact-links">
-
-            <a href="mailto:contato@williansantos.com">
-                Email
-            </a>
-
-            <a href="https://www.instagram.com/" target="_blank">
-                Instagram
-            </a>
-
-        </div>
-
-    </div>
-
+</div>
+</div>
 </section>
-
 
 <footer>
 
-    <span>
-        © Willian Santos
-    </span>
-
-    <span>
-        Florianópolis — Brazil
-    </span>
+<span>© Willian Santos</span>
+<span>Florianópolis — Brazil</span>
 
 </footer>
-
 
 </body>
 </html>
