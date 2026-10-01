@@ -1,38 +1,626 @@
-Willian Santos
-WorksResearchAboutCVContact
-HERO WORK
-replace with artwork
-Willian Santos
-Artist · Florianópolis, Brazil
-Scroll to explore ↓
-01 / Selected works
-PÉLAGOS
-Pélagos2026
-CÁRSTICOS
-Cársticos2026
-VÉSPER
-Vésper2025–26
-PROGNÓSIS
-Prognósis2025–26
-DIVÍCIA
-Divícia2020
-ABLAUIR
-Abluir2026
-02 / Research
-A curiosity to interpret life through the alchemy of painting, matter and environment.
-Water, ecosystems and the transformation of materials are recurring points of departure in Willian Santos’ practice. His research moves between what becomes visible and what remains sensed: density, luminosity, sediment, flow and the forces that sustain life.
-The process is central. Layers of paint are built, transformed, erased and renewed. The image emerges through this continuous negotiation between material and perception — between the path of the eye and the path of the heart.
-03 / About
-Willian Santos (Curitiba, 1985) lives and works in Florianópolis, Brazil.
-He has worked in the visual arts for more than 19 years. He holds a Bachelor’s degree in Visual Arts from Universidade Tuiuti do Paraná (2009), having begun his formal art studies in 2006.
-His practice encompasses painting and material research, including acrylic, spray and encaustic. Across different bodies of work, he investigates water, ecosystems, environment and the alchemy of materials.
-04 / CV
-EducationB.A. Visual Arts — Universidade Tuiuti do Paraná, 2009
-PracticePainting · Encaustic · Acrylic · Material research
-Selected galleriesZipper · Mamute · Ybakatu
-PublicationWillian Santos — Work in Progress
-Selected exhibitions, collections and publications can be expanded here.
-05 / Contact
-For exhibitions, acquisitions and collaborations.
-contato@williansantos.comInstagram ↗
-© Willian SantosFlorianópolis · Brazil
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Willian Santos — Artist</title>
+
+  <meta name="description" content="Willian Santos is a Brazilian visual artist whose research investigates water, matter, environment and the visible and invisible forces that sustain life.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f3ef;
+      color: #171717;
+      line-height: 1.45;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    /* HEADER */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 35px;
+      mix-blend-mode: multiply;
+    }
+
+    .logo {
+      font-size: 17px;
+      letter-spacing: 0.02em;
+      font-weight: 500;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+      font-size: 13px;
+    }
+
+    nav a:hover {
+      opacity: 0.5;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 120px 35px 45px;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 70vh;
+      object-fit: cover;
+      margin-bottom: 30px;
+      background: #d8d7d2;
+    }
+
+    .hero-title {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 40px;
+    }
+
+    .hero-title h1 {
+      font-size: clamp(42px, 7vw, 100px);
+      line-height: 0.9;
+      font-weight: 400;
+      letter-spacing: -0.05em;
+    }
+
+    .hero-title p {
+      max-width: 420px;
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    /* INTRO */
+
+    .intro {
+      padding: 180px 35px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+    }
+
+    .section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .intro-text {
+      max-width: 850px;
+      font-size: clamp(27px, 4vw, 54px);
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+    }
+
+    /* WORKS */
+
+    .works {
+      padding: 0 35px 180px;
+    }
+
+    .works-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 35px;
+    }
+
+    .works-header h2 {
+      font-size: 34px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+
+    .works-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 70px 25px;
+    }
+
+    .work img {
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      background: #d8d7d2;
+    }
+
+    .work-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 12px;
+      font-size: 12px;
+    }
+
+    .work-info span:last-child {
+      text-align: right;
+    }
+
+    /* RESEARCH */
+
+    .research {
+      padding: 160px 35px;
+      border-top: 1px solid #bcbab4;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+    }
+
+    .research-text {
+      max-width: 850px;
+      font-size: 25px;
+      line-height: 1.25;
+    }
+
+    .research-text p + p {
+      margin-top: 28px;
+    }
+
+    /* LARGE IMAGE */
+
+    .full-image {
+      padding: 0 35px 180px;
+    }
+
+    .full-image img {
+      height: 75vh;
+      object-fit: cover;
+      background: #d8d7d2;
+    }
+
+    /* BIO */
+
+    .bio {
+      padding: 160px 35px;
+      border-top: 1px solid #bcbab4;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+    }
+
+    .bio-text {
+      max-width: 760px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+
+    /* CONTACT */
+
+    .contact {
+      padding: 180px 35px 50px;
+      border-top: 1px solid #bcbab4;
+    }
+
+    .contact h2 {
+      font-size: clamp(55px, 10vw, 150px);
+      font-weight: 400;
+      letter-spacing: -0.06em;
+      line-height: 0.9;
+      margin-bottom: 80px;
+    }
+
+    .contact-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-size: 13px;
+    }
+
+    .contact-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    footer {
+      padding: 35px;
+      font-size: 11px;
+      color: #666;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 700px) {
+
+      header {
+        padding: 20px;
+      }
+
+      nav {
+        gap: 15px;
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 100px 20px 30px;
+      }
+
+      .hero-image {
+        height: 58vh;
+      }
+
+      .hero-title {
+        display: block;
+      }
+
+      .hero-title h1 {
+        margin-bottom: 25px;
+      }
+
+      .intro,
+      .research,
+      .bio {
+        padding: 100px 20px;
+        display: block;
+      }
+
+      .section-label {
+        margin-bottom: 30px;
+      }
+
+      .works {
+        padding: 0 20px 100px;
+      }
+
+      .works-grid {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .full-image {
+        padding: 0 20px 100px;
+      }
+
+      .full-image img {
+        height: 55vh;
+      }
+
+      .contact {
+        padding: 100px 20px 40px;
+      }
+
+      .contact-bottom {
+        display: block;
+      }
+
+      .contact-links {
+        margin-top: 25px;
+      }
+
+      footer {
+        padding: 25px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">WILLIAN SANTOS</a>
+
+  <nav>
+    <a href="#works">Works</a>
+    <a href="#research">Research</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+
+<main>
+
+  <!-- HERO -->
+
+  <section class="hero">
+
+    <!-- TROQUE ESTA IMAGEM PELA FOTO PRINCIPAL DA OBRA -->
+    <img
+      class="hero-image"
+      src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=2400&q=90"
+      alt="Willian Santos artwork">
+
+    <div class="hero-title">
+
+      <h1>
+        Willian<br>
+        Santos
+      </h1>
+
+      <p>
+        Visual artist based in Brazil.<br>
+        Researching water, matter, environment
+        and the visible and invisible forces
+        that sustain life.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- INTRO -->
+
+  <section class="intro">
+
+    <div class="section-label">
+      Practice
+    </div>
+
+    <div class="intro-text">
+      Painting as a way of approaching what
+      cannot be completely seen, known or
+      controlled.
+    </div>
+
+  </section>
+
+
+  <!-- WORKS -->
+
+  <section class="works" id="works">
+
+    <div class="works-header">
+
+      <h2>Selected works</h2>
+
+      <span class="section-label">
+        2020—2026
+      </span>
+
+    </div>
+
+
+    <div class="works-grid">
+
+      <article class="work">
+
+        <img
+          src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=1800&q=90"
+          alt="Artwork">
+
+        <div class="work-info">
+          <span>
+            Pélagos
+          </span>
+
+          <span>
+            2026<br>
+            Acrylic on wood
+          </span>
+        </div>
+
+      </article>
+
+
+      <article class="work">
+
+        <img
+          src="https://images.unsplash.com/photo-1541961017774-22349e4a1262?auto=format&fit=crop&w=1800&q=90"
+          alt="Artwork">
+
+        <div class="work-info">
+          <span>
+            Vésper
+          </span>
+
+          <span>
+            Acrylic and spray<br>
+            on wood
+          </span>
+        </div>
+
+      </article>
+
+
+      <article class="work">
+
+        <img
+          src="https://images.unsplash.com/photo-1577083552431-6e5fd01988e5?auto=format&fit=crop&w=1800&q=90"
+          alt="Artwork">
+
+        <div class="work-info">
+          <span>
+            Abluir
+          </span>
+
+          <span>
+            2026<br>
+            Mixed media
+          </span>
+        </div>
+
+      </article>
+
+
+      <article class="work">
+
+        <img
+          src="https://images.unsplash.com/photo-1561214115-f2f134cc4912?auto=format&fit=crop&w=1800&q=90"
+          alt="Artwork">
+
+        <div class="work-info">
+          <span>
+            Cársticos
+          </span>
+
+          <span>
+            Mixed media<br>
+            installation
+          </span>
+        </div>
+
+      </article>
+
+    </div>
+
+  </section>
+
+
+  <!-- RESEARCH -->
+
+  <section class="research" id="research">
+
+    <div class="section-label">
+      Research
+    </div>
+
+    <div class="research-text">
+
+      <p>
+        My research investigates the alchemy of water,
+        matter and environment, approaching painting
+        as a field in which visible and invisible forces
+        become perceptible.
+      </p>
+
+      <p>
+        Water occupies a central position in this
+        investigation — from its surfaces and movements
+        to the greater densities and depths of the oceans.
+        Rather than representing a specific landscape,
+        the work seeks to approach the mystery of life
+        through material processes.
+      </p>
+
+      <p>
+        Layers of paint are built, transformed,
+        obscured and revealed. The process becomes
+        a way of following the eye and the heart,
+        allowing matter itself to participate in the
+        construction of the image.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- LARGE IMAGE -->
+
+  <section class="full-image">
+
+    <img
+      src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=2400&q=90"
+      alt="Willian Santos studio and artwork">
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section class="bio" id="about">
+
+    <div class="section-label">
+      About
+    </div>
+
+    <div class="bio-text">
+
+      <p>
+        Willian Santos (Curitiba, Brazil, 1985) is a
+        visual artist based in Florianópolis, Brazil.
+        He holds a Bachelor's degree in Visual Arts
+        from Universidade Tuiuti do Paraná, completed
+        in 2009.
+      </p>
+
+      <br>
+
+      <p>
+        His practice encompasses painting,
+        encaustic, acrylic, spray paint and
+        installation, with an ongoing investigation
+        into material transformation, water,
+        ecosystems and the relationship between
+        perception and the environment.
+      </p>
+
+      <br>
+
+      <p>
+        Since 2009, encaustic has been an important
+        part of his material research, alongside
+        contemporary painting processes that combine
+        accumulation, removal and transformation.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section class="contact" id="contact">
+
+    <h2>
+      Let's talk.
+    </h2>
+
+    <div class="contact-bottom">
+
+      <div>
+        Willian Santos<br>
+        Florianópolis — Brazil
+      </div>
+
+      <div class="contact-links">
+
+        <a href="mailto:contato@williansantos.com">
+          Email
+        </a>
+
+        <a href="https://www.instagram.com/" target="_blank">
+          Instagram
+        </a>
+
+      </div>
+
+    </div>
+
+  </section>
+
+</main>
+
+
+<footer>
+  © 2026 Willian Santos
+</footer>
+
+
+</body>
+</html>
