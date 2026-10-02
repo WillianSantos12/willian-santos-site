@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Works — Willian Santos</title>
+
+<meta name="description" content="Selected works by Willian Santos, 2012—2026.">
+
+<style>
+
+:root {
+    --black: #0b0b0b;
+    --white: #f7f7f5;
+    --gray: #777;
+    --line: #d8d8d5;
+    --light: #eeeeeb;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--white);
+    color: var(--black);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 72px;
+    background: rgba(247,247,245,0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 34px;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+}
+
+nav a {
+    position: relative;
+}
+
+nav a.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -6px;
+    height: 1px;
+    background: var(--black);
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.page-intro {
+    padding: 180px 7vw 130px;
+    max-width: 1500px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--gray);
+    margin-bottom: 34px;
+}
+
+.page-intro h1 {
+    font-size: clamp(54px, 8vw, 120px);
+    line-height: 0.9;
+    font-weight: 400;
+    letter-spacing: -0.055em;
+    margin: 0 0 42px;
+}
+
+.intro-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 60px;
+    max-width: 1000px;
+}
+
+.intro-text {
+    font-size: 19px;
+    line-height: 1.45;
+    max-width: 620px;
+}
+
+.intro-period {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: var(--gray);
+}
+
+/* =========================
+   WORK SECTIONS
+========================= */
+
+.works {
+    padding: 0 7vw 150px;
+}
+
+.work-section {
+    margin-bottom: 170px;
+}
+
+.work-section:last-child {
+    margin-bottom: 80px;
+}
+
+.work-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border-top: 1px solid var(--line);
+    padding-top: 15px;
+    margin-bottom: 30px;
+}
+
+.work-title {
+    font-size: 13px;
+    letter-spacing: 0.02em;
+}
+
+.work-year {
+    font-size: 11px;
+    color: var(--gray);
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.work-image {
+    width: 100%;
+    display: block;
+}
+
+.work-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* HERO WORK */
+
+.work-large {
+    max-width: 1250px;
+}
+
+.work-large .work-image {
+    max-height: 78vh;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* TWO COLUMN */
+
+.work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5vw;
+    align-items: start;
+}
+
+.work-grid .work-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CENTERED */
+
+.work-centered {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.work-centered .work-image {
+    display: flex;
+    justify-content: center;
+}
+
+.work-centered img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* SMALL */
+
+.work-small {
+    max-width: 620px;
+    margin-left: 13%;
+}
+
+.work-small img {
+    width: 100%;
+    height: auto;
+}
+
+/* =========================
+   CAPTIONS
+========================= */
+
+.caption {
+    margin-top: 17px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 30px;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.caption-main {
+    color: var(--black);
+}
+
+.caption-details {
+    color: var(--gray);
+    text-align: right;
+    max-width: 250px;
+}
+
+/* =========================
+   PLACEHOLDER
+========================= */
+
+.image-placeholder {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.placeholder-large {
+    aspect-ratio: 4 / 3;
+}
+
+.placeholder-small {
+    aspect-ratio: 4 / 3;
+}
+
+/* =========================
+   INTERSTITIAL
+========================= */
+
+.interstitial {
+    background: var(--black);
+    color: var(--white);
+    margin: 0 -7vw 170px;
+    padding: 110px 14vw;
+}
+
+.interstitial-label {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 40px;
+}
+
+.interstitial p {
+    font-size: clamp(26px, 3.4vw, 52px);
+    line-height: 1.1;
+    letter-spacing: -0.025em;
+    max-width: 950px;
+    margin: 0;
+}
+
+/* =========================
+   FINAL
+========================= */
+
+.final-note {
+    padding-top: 80px;
+    border-top: 1px solid var(--line);
+    font-size: 13px;
+    color: var(--gray);
+    max-width: 500px;
+}
+
+.final-note strong {
+    color: var(--black);
+    font-weight: 400;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: var(--black);
+    color: var(--white);
+    padding: 80px 7vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+}
+
+.footer-title {
+    font-size: 13px;
+}
+
+.footer-right {
+    text-align: right;
+    font-size: 11px;
+    line-height: 1.8;
+    opacity: 0.65;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    header {
+        height: 64px;
+        padding: 0 20px;
+    }
+
+    nav {
+        gap: 16px;
+        font-size: 10px;
+    }
+
+    .page-intro {
+        padding: 140px 20px 90px;
+    }
+
+    .page-intro h1 {
+        font-size: 64px;
+    }
+
+    .intro-bottom {
+        display: block;
+    }
+
+    .intro-text {
+        font-size: 17px;
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .works {
+        padding: 0 20px 100px;
+    }
+
+    .work-section {
+        margin-bottom: 110px;
+    }
+
+    .work-grid {
+        grid-template-columns: 1fr;
+        gap: 70px;
+    }
+
+    .work-small {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .caption {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .caption-details {
+        text-align: left;
+    }
+
+    .interstitial {
+        margin: 0 -20px 110px;
+        padding: 80px 20px;
+    }
+
+    .interstitial p {
+        font-size: 30px;
+    }
+
+    footer {
+        padding: 60px 20px;
+        display: block;
+    }
+
+    .footer-right {
+        text-align: left;
+        margin-top: 35px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+
+    <a href="index.html" class="logo">
+        Willian Santos
+    </a>
+
+    <nav>
+        <a href="works.html" class="active">Works</a>
+        <a href="index.html#research">Research</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+    </nav>
+
+</header>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<main>
+
+<section class="page-intro">
+
+    <div class="eyebrow">
+        Selected works
+    </div>
+
+    <h1>
+        WORKS
+    </h1>
+
+    <div class="intro-bottom">
+
+        <div class="intro-text">
+            Painting, material and perception.
+        </div>
+
+        <div class="intro-period">
+            2012—2026
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     WORKS
+========================= -->
+
+<section class="works">
+
+
+<!-- 01 — VÉSPER -->
+
+<article class="work-section work-large">
+
+    <div class="work-meta">
+        <div class="work-title">
+            Vésper
+        </div>
+
+        <div class="work-year">
+            2025
+        </div>
+    </div>
+
+    <div class="work-image">
+        <img
+            src="vesper-25.jpg"
+            alt="Vésper, 2025 — Willian Santos"
+        >
+    </div>
+
+    <div class="caption">
+
+        <div class="caption-main">
+            Acrylic, beetles, wild clove and lichen on canvas.
+        </div>
+
+        <div class="caption-details">
+            176 × 216 cm
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- 02 + 03 — ABLUIR / PÉLAGOS -->
+
+<div class="work-grid">
+
+
+    <article class="work-item">
+
+        <div class="work-meta">
+            <div class="work-title">
+                Abluir
+            </div>
+
+            <div class="work-year">
+                2026
+            </div>
+        </div>
+
+        <img
+            src="abluir-26.jpg"
+            alt="Abluir, 2026 — Willian Santos"
+        >
+
+        <div class="caption">
+
+            <div class="caption-main">
+                Acrylic and spray on canvas.
+            </div>
+
+            <div class="caption-details">
+                164 × 182 cm
+            </div>
+
+        </div>
+
+    </article>
+
+
+    <article class="work-item">
+
+        <div class="work-meta">
+            <div class="work-title">
+                Pélagos
+            </div>
+
+            <div class="work-year">
+                2026
+            </div>
+        </div>
+
+        <img
+            src="pelagos-1.jpg"
+            alt="Pélagos, 2026 — Willian Santos"
+        >
+
+        <div class="caption">
+
+            <div class="caption-main">
+                Acrylic on canvas.
+            </div>
+
+            <div class="caption-details">
+                Pélagos series
+            </div>
+
+        </div>
+
+    </article>
+
+</div>
+
+
+<!-- 04 + 05 — ECOSYSTEMS -->
+
+<div class="work-section">
+
+    <div class="work-meta">
+
+        <div class="work-title">
+            Ecosystems
+        </div>
+
+        <div class="work-year">
+            2025
+        </div>
+
+    </div>
+
+
+    <div class="work-grid">
+
+
+        <article class="work-item">
+
+            <div class="image-placeholder placeholder-large">
+                IMAGE — DESPERTAR DO DELTA
+            </div>
+
+            <div class="caption">
+
+                <div class="caption-main">
+                    Despertar do delta
+                </div>
+
+                <div class="caption-details">
+                    193 × 222 cm<br>
+                    2025
+                </div>
+
+            </div>
+
+        </article>
+
+
+        <article class="work-item">
+
+            <div class="image-placeholder placeholder-large">
+                IMAGE — PROGNÓSIS
+            </div>
+
+            <div class="caption">
+
+                <div class="caption-main">
+                    Prognósis
+                </div>
+
+                <div class="caption-details">
+                    144 × 97 cm<br>
+                    2025
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</div>
+
+
+<!-- 06 — TÓTEME -->
+
+<article class="work-section work-centered">
+
+    <div class="work-meta">
+
+        <div class="work-title">
+            Tóteme
+        </div>
+
+        <div class="work-year">
+            2024
+        </div>
+
+    </div>
+
+    <div class="image-placeholder">
+        IMAGE — TÓTEME
+    </div>
+
+    <div class="caption">
+
+        <div class="caption-main">
+            Acrylic on canvas.
+        </div>
+
+        <div class="caption-details">
+            180 × 163 cm
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- 07 — EUSTASIA -->
+
+<article class="work-section">
+
+    <div class="work-meta">
+
+        <div class="work-title">
+            Eustasia
+        </div>
+
+        <div class="work-year">
+            2024
+        </div>
+
+    </div>
+
+
+    <div class="work-grid">
+
+        <div class="work-item">
+
+            <div class="image-placeholder">
+                IMAGE — EUSTASIA I
+            </div>
+
+        </div>
+
+        <div class="work-item">
+
+            <div class="image-placeholder">
+                IMAGE — EUSTASIA II
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="caption">
+
+        <div class="caption-main">
+            Acrylic on naval cedar plywood.
+        </div>
+
+        <div class="caption-details">
+            110 × 82 cm each<br>
+            Águas Compostas · ZIPPER Galeria · 2025
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- 08 — DÉVICO -->
+
+<article class="work-section work-small">
+
+    <div class="work-meta">
+
+        <div class="work-title">
+            Dévico
+        </div>
+
+        <div class="work-year">
+            2024
+        </div>
+
+    </div>
+
+    <div class="image-placeholder placeholder-small">
+        IMAGE — DÉVICO
+    </div>
+
+    <div class="caption">
+
+        <div class="caption-main">
+            Acrylic on naval cedar plywood.
+        </div>
+
+        <div class="caption-details">
+            62 × 49 cm
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- =========================
+     INTERSTITIAL
+========================= -->
+
+<div class="interstitial">
+
+    <div class="interstitial-label">
+        Material research
+    </div>
+
+    <p>
+        The material language of the work extends through acrylic, spray, encaustic, pigments and natural elements.
+    </p>
+
+</div>
+
+
+<!-- 09 — ECLOSÃO -->
+
+<article class="work-section work-centered">
+
+    <div class="work-meta">
+
+        <div class="work-title">
+            Eclosão
+        </div>
+
+        <div class="work-year">
+            2022
+        </div>
+
+    </div>
+
+    <div class="image-placeholder">
+        IMAGE — ECLOSÃO
+    </div>
+
+    <div class="caption">
+
+        <div class="caption-main">
+            Encaustic on naval plywood.
+        </div>
+
+        <div class="caption-details">
+            110 × 78 cm
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- 10 — PELÚCIDO -->
+
+<article class="work-section work-large">
+
+    <div class="work-meta">
+
+        <div class="work-title">
+            Pelúcido
+        </div>
+
+        <div class="work-year">
+            2012
+        </div>
+
+    </div>
+
+    <div class="image-placeholder">
+        IMAGE — PELÚCIDO
+    </div>
+
+    <div class="caption">
+
+        <div class="caption-main">
+            Acrylic and encaustic on canvas.
+        </div>
+
+        <div class="caption-details">
+            180 × 220 cm
+        </div>
+
+    </div>
+
+</article>
+
+
+<!-- FINAL NOTE -->
+
+<div class="final-note">
+
+    <strong>The research continues.</strong><br><br>
+
+    The selection brings together different moments of the practice,
+    from material experimentation to recent investigations into
+    water, ecosystems, perception and transformation.
+
+</div>
+
+
+</section>
+
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-title">
+        Willian Santos
+    </div>
+
+    <div class="footer-right">
+
+        Florianópolis · Brazil<br>
+
+        <a href="mailto:contact@williansantos.com">
+            contact@williansantos.com
+        </a><br>
+
+        <a
+            href="https://www.instagram.com/williansantos_studio/"
+            target="_blank"
+        >
+            Instagram
+        </a>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
