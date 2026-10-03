@@ -6,7 +6,10 @@
 
   <title>Willian Santos — Visual Artist</title>
 
-  <meta name="description" content="Willian Santos is a Brazilian visual artist based in Florianópolis. His practice investigates painting, water, matter, ecosystems and perception.">
+  <meta
+    name="description"
+    content="Willian Santos is a Brazilian visual artist based in Florianópolis. His practice investigates painting, water, matter, ecosystems and perception."
+  >
 
   <style>
 
@@ -206,9 +209,9 @@
 
     .works-grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      column-gap: 22px;
-      row-gap: 120px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: 38px;
+      row-gap: 105px;
 
       padding-top: 55px;
     }
@@ -216,59 +219,18 @@
     .work {
       display: flex;
       flex-direction: column;
+      min-width: 0;
     }
 
-    .work:nth-child(1) {
-      grid-column: 1 / span 7;
-    }
-
-    .work:nth-child(2) {
-      grid-column: 9 / span 4;
-      margin-top: 170px;
-    }
-
-    .work:nth-child(3) {
-      grid-column: 2 / span 5;
-      margin-top: 80px;
-    }
-
-    .work:nth-child(4) {
-      grid-column: 8 / span 5;
-      margin-top: 10px;
-    }
-
-    .work:nth-child(5) {
-      grid-column: 1 / span 4;
-      margin-top: 100px;
-    }
-
-    .work:nth-child(6) {
-      grid-column: 6 / span 6;
-      margin-top: 30px;
-    }
-
-    .work:nth-child(7) {
-      grid-column: 2 / span 6;
-      margin-top: 100px;
-    }
-
-    .work:nth-child(8) {
-      grid-column: 10 / span 3;
-      margin-top: 180px;
-    }
-
-    .work:nth-child(9) {
-      grid-column: 1 / span 5;
-      margin-top: 80px;
-    }
-
-    .work:nth-child(10) {
-      grid-column: 7 / span 5;
-      margin-top: 10px;
-    }
+    /*
+      Todas as obras ocupam exatamente o mesmo
+      campo visual.
+    */
 
     .work-image {
       width: 100%;
+      aspect-ratio: 4 / 3;
+
       background: #fff;
 
       display: flex;
@@ -280,14 +242,16 @@
 
     .work-image img {
       width: 100%;
-      height: auto;
+      height: 100%;
+
       object-fit: contain;
+      object-position: center;
 
       transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
     }
 
     .work:hover .work-image img {
-      transform: scale(1.015);
+      transform: scale(1.012);
     }
 
     .work-info {
@@ -295,13 +259,14 @@
       grid-template-columns: 1fr auto;
       gap: 20px;
 
-      padding-top: 13px;
+      padding-top: 15px;
     }
 
     .work-title {
-      font-size: 11px;
+      font-size: 12px;
       line-height: 1.4;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
+      font-weight: 700;
     }
 
     .work-details {
@@ -309,7 +274,7 @@
 
       font-size: 9px;
       line-height: 1.55;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
     }
 
@@ -342,6 +307,7 @@
 
     .research-body {
       max-width: 720px;
+      margin-left: calc(1fr + 8vw);
 
       font-size: 21px;
       line-height: 1.35;
@@ -350,18 +316,6 @@
 
     .research-body p + p {
       margin-top: 35px;
-    }
-
-    .research-image {
-      margin-top: 100px;
-
-      width: 100%;
-      max-width: 1100px;
-    }
-
-    .research-image img {
-      width: 100%;
-      height: auto;
     }
 
 
@@ -393,6 +347,7 @@
       letter-spacing: -0.035em;
       font-weight: 400;
 
+      margin-top: 28px;
       margin-bottom: 45px;
     }
 
@@ -508,13 +463,13 @@
 
 
     /* =========================================================
-       RESPONSIVE
+       RESPONSIVE — TABLET
     ========================================================= */
 
     @media (max-width: 900px) {
 
       header {
-        padding: 18px 18px;
+        padding: 18px;
       }
 
       nav {
@@ -554,23 +509,8 @@
       }
 
       .works-grid {
-        grid-template-columns: 1fr;
-        row-gap: 85px;
-      }
-
-      .work,
-      .work:nth-child(n) {
-        grid-column: 1;
-        margin-top: 0;
-      }
-
-      .work:nth-child(2),
-      .work:nth-child(4),
-      .work:nth-child(6),
-      .work:nth-child(8),
-      .work:nth-child(10) {
-        margin-left: 12%;
-        width: 88%;
+        column-gap: 24px;
+        row-gap: 75px;
       }
 
       .research {
@@ -584,6 +524,7 @@
       }
 
       .research-body {
+        margin-left: 0;
         font-size: 18px;
       }
 
@@ -612,6 +553,10 @@
     }
 
 
+    /* =========================================================
+       RESPONSIVE — MOBILE
+    ========================================================= */
+
     @media (max-width: 600px) {
 
       header {
@@ -628,6 +573,16 @@
 
       .section-heading {
         padding-bottom: 20px;
+      }
+
+      /*
+        No celular as duas colunas passam
+        para uma única coluna.
+      */
+
+      .works-grid {
+        grid-template-columns: 1fr;
+        row-gap: 70px;
       }
 
       .work-info {
@@ -689,10 +644,12 @@
     <section class="hero">
 
       <div class="hero-image">
+
         <img
           src="Studio_inprogress.jpg"
           alt="Willian Santos in the studio"
         >
+
       </div>
 
       <div class="hero-meta">
@@ -753,15 +710,17 @@
       <div class="works-grid">
 
 
-        <!-- PÉLAGOS I -->
+        <!-- 01 — PÉLAGOS I -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="pelagos-1.jpg"
               alt="Pélagos I, 2026"
             >
+
           </div>
 
           <div class="work-info">
@@ -779,15 +738,17 @@
         </a>
 
 
-        <!-- VÉSPER -->
+        <!-- 02 — VÉSPER -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="vesper-25.jpg"
               alt="Vésper, 2025"
             >
+
           </div>
 
           <div class="work-info">
@@ -805,15 +766,17 @@
         </a>
 
 
-        <!-- ABLUIR -->
+        <!-- 03 — ABLUIR -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="abluir-26.jpg"
               alt="Abluir, 2026"
             >
+
           </div>
 
           <div class="work-info">
@@ -831,15 +794,17 @@
         </a>
 
 
-        <!-- PÉLAGOS X -->
+        <!-- 04 — PÉLAGOS X -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Pelagos X_2026.jpg"
               alt="Pélagos X, 2026"
             >
+
           </div>
 
           <div class="work-info">
@@ -857,15 +822,17 @@
         </a>
 
 
-        <!-- DÉVICO -->
+        <!-- 05 — DÉVICO -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Devico.jpg"
               alt="Dévico, 2024"
             >
+
           </div>
 
           <div class="work-info">
@@ -883,15 +850,17 @@
         </a>
 
 
-        <!-- TÓTEME -->
+        <!-- 06 — TÓTEME -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Toteme_WS_24.jpg"
               alt="Tóteme, 2024"
             >
+
           </div>
 
           <div class="work-info">
@@ -909,15 +878,17 @@
         </a>
 
 
-        <!-- CANIS LUPUS -->
+        <!-- 07 — CANIS LUPUS -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Canis Lupus.jpg"
               alt="Canis Lupus"
             >
+
           </div>
 
           <div class="work-info">
@@ -935,15 +906,17 @@
         </a>
 
 
-        <!-- ECOSFERA -->
+        <!-- 08 — ECOSFERA -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Ecosfera_22_WS.jpg"
               alt="Ecosfera, 2022"
             >
+
           </div>
 
           <div class="work-info">
@@ -961,15 +934,17 @@
         </a>
 
 
-        <!-- ENTRECHO III -->
+        <!-- 09 — ENTRECHO III -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Entrecho III.jpg"
               alt="Entrecho III"
             >
+
           </div>
 
           <div class="work-info">
@@ -987,15 +962,17 @@
         </a>
 
 
-        <!-- SNAKE -->
+        <!-- 10 — SNAKE -->
 
         <a class="work" href="#">
 
           <div class="work-image">
+
             <img
               src="Snake_solo.jpg"
               alt="Snake"
             >
+
           </div>
 
           <div class="work-info">
@@ -1056,16 +1033,6 @@
         <p>
           The process is at the center of my practice. It is a self-provoked path of errors and discoveries, in which layers of paint continuously die and are reborn.
         </p>
-
-      </div>
-
-
-      <div class="research-image">
-
-        <img
-          src="Studio_inprogress.jpg"
-          alt="Willian Santos studio"
-        >
 
       </div>
 
