@@ -12,6 +12,7 @@
   >
 
   <style>
+
     /* =========================================================
        BASE
     ========================================================= */
@@ -27,7 +28,7 @@
     }
 
     body {
-      background: #e9e7e1;
+      background: #fff;
       color: #111;
       font-family: Arial, Helvetica, sans-serif;
       font-weight: 400;
@@ -45,6 +46,7 @@
       text-decoration: none;
     }
 
+
     /* =========================================================
        HEADER
     ========================================================= */
@@ -55,7 +57,9 @@
       left: 0;
       width: 100%;
       z-index: 100;
+
       padding: 22px 28px;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -85,6 +89,7 @@
       opacity: 0.55;
     }
 
+
     /* =========================================================
        HERO
     ========================================================= */
@@ -93,14 +98,17 @@
       width: 100%;
       height: 100vh;
       min-height: 620px;
+
       position: relative;
       overflow: hidden;
-      background: #dcd9d1;
+
+      background: #fff;
     }
 
     .hero-image {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
       object-position: center;
     }
@@ -109,11 +117,14 @@
       position: absolute;
       left: 28px;
       bottom: 25px;
+
       display: flex;
       gap: 35px;
+
       font-size: 11px;
       letter-spacing: 0.04em;
     }
+
 
     /* =========================================================
        INTRO
@@ -122,6 +133,7 @@
     .intro {
       padding: 150px 28px 145px;
       max-width: 1180px;
+      background: #fff;
     }
 
     .intro p {
@@ -131,6 +143,7 @@
       max-width: 1080px;
     }
 
+
     /* =========================================================
        SECTION HEADER
     ========================================================= */
@@ -139,6 +152,7 @@
       display: flex;
       justify-content: space-between;
       align-items: baseline;
+
       padding: 0 28px 45px;
     }
 
@@ -148,18 +162,22 @@
       letter-spacing: 0.05em;
     }
 
+
     /* =========================================================
        WORKS
     ========================================================= */
 
     #works {
       padding-bottom: 155px;
+      background: #fff;
     }
 
     .works-grid {
       padding: 0 28px;
+
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
+
       column-gap: 38px;
       row-gap: 88px;
     }
@@ -169,14 +187,17 @@
     }
 
     /*
-      Every image receives exactly the same visual field.
-      The artwork itself is never cropped.
+      Todas as obras ocupam exatamente o mesmo
+      campo visual.
+
+      A imagem nunca é cortada.
     */
 
     .work-image {
       width: 100%;
       aspect-ratio: 4 / 3;
-      background: #dedbd4;
+
+      background: #fff;
 
       display: flex;
       align-items: center;
@@ -188,14 +209,17 @@
     .work-image img {
       width: 100%;
       height: 100%;
+
       object-fit: contain;
       object-position: center;
     }
 
     .work-info {
       padding-top: 17px;
+
       display: grid;
       grid-template-columns: 1fr auto;
+
       column-gap: 20px;
       align-items: baseline;
     }
@@ -213,11 +237,14 @@
 
     .work-medium {
       grid-column: 1 / -1;
+
       padding-top: 5px;
+
       font-size: 10px;
       color: #777;
       line-height: 1.35;
     }
+
 
     /* =========================================================
        RESEARCH
@@ -225,7 +252,8 @@
 
     #research {
       background: #111;
-      color: #e9e7e1;
+      color: #fff;
+
       padding: 145px 28px 155px;
     }
 
@@ -237,20 +265,25 @@
       font-size: clamp(30px, 4vw, 58px);
       line-height: 1.05;
       letter-spacing: -0.035em;
+
       max-width: 1000px;
+
       margin-bottom: 95px;
     }
 
     .research-columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 90px;
+
       max-width: 1050px;
     }
 
     .research-columns p {
       font-size: 15px;
       line-height: 1.55;
+
       max-width: 500px;
     }
 
@@ -258,31 +291,38 @@
       margin-top: 24px;
     }
 
+
     /* =========================================================
        PROCESS
     ========================================================= */
 
     #process {
       padding: 145px 28px 155px;
+      background: #fff;
     }
 
     .process-grid {
       display: grid;
       grid-template-columns: 1.4fr 1fr;
+
       gap: 80px;
+
       align-items: start;
     }
 
     .process-image {
       width: 100%;
       aspect-ratio: 4 / 3;
-      background: #dedbd4;
+
+      background: #fff;
+
       overflow: hidden;
     }
 
     .process-image img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
     }
 
@@ -295,7 +335,9 @@
       font-size: clamp(30px, 3.5vw, 50px);
       line-height: 1.05;
       letter-spacing: -0.035em;
+
       font-weight: 400;
+
       margin-bottom: 50px;
     }
 
@@ -308,18 +350,20 @@
       margin-top: 24px;
     }
 
+
     /* =========================================================
        ABOUT
     ========================================================= */
 
     #about {
       padding: 145px 28px 155px;
-      border-top: 1px solid rgba(0,0,0,0.15);
+      background: #fff;
     }
 
     .about-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
       gap: 90px;
     }
 
@@ -327,11 +371,13 @@
       font-size: clamp(32px, 4vw, 58px);
       line-height: 1.04;
       letter-spacing: -0.035em;
+
       font-weight: 400;
     }
 
     .about-text {
       max-width: 550px;
+
       font-size: 15px;
       line-height: 1.55;
     }
@@ -340,21 +386,25 @@
       margin-top: 24px;
     }
 
+
     /* =========================================================
        CONTACT
     ========================================================= */
 
     #contact {
       padding: 145px 28px 50px;
+
       background: #111;
-      color: #e9e7e1;
+      color: #fff;
     }
 
     .contact-title {
       font-size: clamp(55px, 9vw, 145px);
       line-height: 0.88;
       letter-spacing: -0.06em;
+
       font-weight: 400;
+
       margin-bottom: 130px;
     }
 
@@ -362,13 +412,16 @@
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
+
       gap: 40px;
     }
 
     .contact-links {
       display: flex;
       flex-direction: column;
+
       gap: 7px;
+
       font-size: 12px;
     }
 
@@ -381,14 +434,16 @@
       color: #888;
     }
 
+
     /* =========================================================
-       RESPONSIVE — TABLET
+       TABLET
     ========================================================= */
 
     @media (max-width: 1000px) {
 
       .works-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+
         column-gap: 28px;
         row-gap: 70px;
       }
@@ -396,6 +451,7 @@
       .process-grid,
       .about-grid {
         grid-template-columns: 1fr 1fr;
+
         gap: 45px;
       }
 
@@ -404,14 +460,15 @@
       }
     }
 
+
     /* =========================================================
-       RESPONSIVE — MOBILE
+       MOBILE
     ========================================================= */
 
     @media (max-width: 650px) {
 
       header {
-        padding: 18px 18px;
+        padding: 18px;
       }
 
       .site-name {
@@ -426,6 +483,7 @@
         font-size: 10px;
       }
 
+
       .hero {
         min-height: 560px;
       }
@@ -433,9 +491,12 @@
       .hero-meta {
         left: 18px;
         bottom: 18px;
+
         gap: 18px;
+
         font-size: 9px;
       }
+
 
       .intro {
         padding: 95px 18px 100px;
@@ -446,13 +507,17 @@
         line-height: 1.07;
       }
 
+
       .section-header {
         padding: 0 18px 32px;
       }
 
+
       .works-grid {
         padding: 0 18px;
+
         grid-template-columns: 1fr;
+
         row-gap: 65px;
       }
 
@@ -468,17 +533,20 @@
         padding-bottom: 110px;
       }
 
+
       #research {
         padding: 100px 18px 110px;
       }
 
       .research-lead {
         font-size: 32px;
+
         margin-bottom: 65px;
       }
 
       .research-columns {
         grid-template-columns: 1fr;
+
         gap: 35px;
       }
 
@@ -486,17 +554,20 @@
         font-size: 14px;
       }
 
+
       #process {
         padding: 100px 18px 110px;
       }
 
       .process-grid {
         grid-template-columns: 1fr;
+
         gap: 50px;
       }
 
       .process-text h2 {
         font-size: 36px;
+
         margin-bottom: 35px;
       }
 
@@ -504,12 +575,14 @@
         font-size: 14px;
       }
 
+
       #about {
         padding: 100px 18px 110px;
       }
 
       .about-grid {
         grid-template-columns: 1fr;
+
         gap: 50px;
       }
 
@@ -521,32 +594,43 @@
         font-size: 14px;
       }
 
+
       #contact {
         padding: 100px 18px 35px;
       }
 
       .contact-title {
         font-size: 76px;
+
         margin-bottom: 90px;
       }
 
       .contact-bottom {
         flex-direction: column;
+
         align-items: flex-start;
+
         gap: 45px;
       }
+
     }
+
   </style>
 </head>
 
+
 <body>
+
 
   <!-- =======================================================
        HEADER
   ======================================================== -->
 
   <header>
-    <a href="#top" class="site-name">Willian Santos</a>
+
+    <a href="#top" class="site-name">
+      Willian Santos
+    </a>
 
     <nav>
       <a href="#works">Works</a>
@@ -554,14 +638,21 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
+
   </header>
 
 
+
   <!-- =======================================================
-       HERO
+       MAIN
   ======================================================== -->
 
   <main id="top">
+
+
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
 
     <section class="hero">
 
@@ -580,6 +671,7 @@
     </section>
 
 
+
     <!-- =====================================================
          INTRO
     ====================================================== -->
@@ -593,6 +685,7 @@
     </section>
 
 
+
     <!-- =====================================================
          WORKS
     ====================================================== -->
@@ -600,239 +693,352 @@
     <section id="works">
 
       <div class="section-header">
-        <span class="section-number">01</span>
-        <span class="section-label">Works</span>
+
+        <span class="section-number">
+          01
+        </span>
+
+        <span class="section-label">
+          Works
+        </span>
+
       </div>
 
 
       <div class="works-grid">
 
 
-        <!-- WORK 01 -->
+        <!-- 01 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="pelagos-1.jpg"
               alt="Pélagos I, 2026"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Pélagos I</div>
-            <div class="work-year">2026</div>
+
+            <div class="work-title">
+              Pélagos I
+            </div>
+
+            <div class="work-year">
+              2026
+            </div>
+
             <div class="work-medium">
               Acrylic on naval plywood
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 02 -->
+
+        <!-- 02 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="vesper-25.jpg"
               alt="Vésper, 2025"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Vésper</div>
-            <div class="work-year">2025</div>
+
+            <div class="work-title">
+              Vésper
+            </div>
+
+            <div class="work-year">
+              2025
+            </div>
+
             <div class="work-medium">
               Acrylic and mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 03 -->
+
+        <!-- 03 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="abluir-26.jpg"
               alt="Abluir, 2026"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Abluir</div>
-            <div class="work-year">2026</div>
+
+            <div class="work-title">
+              Abluir
+            </div>
+
+            <div class="work-year">
+              2026
+            </div>
+
             <div class="work-medium">
               Acrylic and mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 04 -->
+
+        <!-- 04 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Pelagos X_2026.jpg"
               alt="Pélagos X, 2026"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Pélagos X</div>
-            <div class="work-year">2026</div>
+
+            <div class="work-title">
+              Pélagos X
+            </div>
+
+            <div class="work-year">
+              2026
+            </div>
+
             <div class="work-medium">
               Acrylic on naval plywood
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 05 -->
+
+        <!-- 05 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Devico.jpg"
               alt="Dévico, 2024"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Dévico</div>
-            <div class="work-year">2024</div>
+
+            <div class="work-title">
+              Dévico
+            </div>
+
+            <div class="work-year">
+              2024
+            </div>
+
             <div class="work-medium">
               Mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 06 -->
+
+        <!-- 06 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Toteme_WS_24.jpg"
               alt="Tóteme, 2024"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Tóteme</div>
-            <div class="work-year">2024</div>
+
+            <div class="work-title">
+              Tóteme
+            </div>
+
+            <div class="work-year">
+              2024
+            </div>
+
             <div class="work-medium">
               Mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 07 -->
+
+        <!-- 07 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Canis Lupus.jpg"
               alt="Canis Lupus"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Canis Lupus</div>
-            <div class="work-year"></div>
+
+            <div class="work-title">
+              Canis Lupus
+            </div>
+
+            <div class="work-year">
+            </div>
+
             <div class="work-medium">
               Mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 08 -->
+
+        <!-- 08 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Ecosfera_22_WS.jpg"
-              alt="Ecosfera"
+              alt="Ecosfera, 2022"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Ecosfera</div>
-            <div class="work-year">2022</div>
+
+            <div class="work-title">
+              Ecosfera
+            </div>
+
+            <div class="work-year">
+              2022
+            </div>
+
             <div class="work-medium">
               Mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 09 -->
+
+        <!-- 09 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Entrecho III.jpg"
               alt="Entrecho III"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Entrecho III</div>
-            <div class="work-year"></div>
+
+            <div class="work-title">
+              Entrecho III
+            </div>
+
+            <div class="work-year">
+            </div>
+
             <div class="work-medium">
               Mixed media
             </div>
+
           </div>
 
         </article>
 
 
-        <!-- WORK 10 -->
+
+        <!-- 10 -->
 
         <article class="work">
 
           <div class="work-image">
+
             <img
               src="Snake_solo.jpg"
               alt="Snake"
               loading="lazy"
             >
+
           </div>
 
           <div class="work-info">
-            <div class="work-title">Snake</div>
-            <div class="work-year"></div>
+
+            <div class="work-title">
+              Snake
+            </div>
+
+            <div class="work-year">
+            </div>
+
             <div class="work-medium">
               Mixed media
             </div>
+
           </div>
 
         </article>
@@ -843,6 +1049,7 @@
     </section>
 
 
+
     <!-- =====================================================
          RESEARCH
     ====================================================== -->
@@ -850,15 +1057,26 @@
     <section id="research">
 
       <div class="section-header">
-        <span class="section-number">02</span>
-        <span class="section-label">Research</span>
+
+        <span class="section-number">
+          02
+        </span>
+
+        <span class="section-label">
+          Research
+        </span>
+
       </div>
+
 
       <div class="research-inner">
 
         <div class="research-lead">
+
           The image emerges through a continuous encounter between matter, perception and transformation.
+
         </div>
+
 
         <div class="research-columns">
 
@@ -873,6 +1091,7 @@
             </p>
 
           </div>
+
 
           <div>
 
@@ -893,6 +1112,7 @@
     </section>
 
 
+
     <!-- =====================================================
          PROCESS
     ====================================================== -->
@@ -900,9 +1120,17 @@
     <section id="process">
 
       <div class="section-header">
-        <span class="section-number">03</span>
-        <span class="section-label">Process</span>
+
+        <span class="section-number">
+          03
+        </span>
+
+        <span class="section-label">
+          Process
+        </span>
+
       </div>
+
 
       <div class="process-grid">
 
@@ -915,6 +1143,7 @@
           >
 
         </div>
+
 
         <div class="process-text">
 
@@ -941,6 +1170,7 @@
     </section>
 
 
+
     <!-- =====================================================
          ABOUT
     ====================================================== -->
@@ -948,15 +1178,24 @@
     <section id="about">
 
       <div class="section-header">
-        <span class="section-number">04</span>
-        <span class="section-label">About</span>
+
+        <span class="section-number">
+          04
+        </span>
+
+        <span class="section-label">
+          About
+        </span>
+
       </div>
+
 
       <div class="about-grid">
 
         <div class="about-title">
           Willian Santos
         </div>
+
 
         <div class="about-text">
 
@@ -983,6 +1222,7 @@
     </section>
 
 
+
     <!-- =====================================================
          CONTACT
     ====================================================== -->
@@ -992,6 +1232,7 @@
       <div class="contact-title">
         Let’s talk.
       </div>
+
 
       <div class="contact-bottom">
 
@@ -1011,6 +1252,7 @@
 
         </div>
 
+
         <div class="copyright">
           © Willian Santos
         </div>
@@ -1018,6 +1260,7 @@
       </div>
 
     </section>
+
 
   </main>
 
