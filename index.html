@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>Willian Santos — Visual Artist</title>
 
   <meta
     name="description"
-    content="Willian Santos is a Brazilian visual artist based in Florianópolis. His practice investigates painting, water, matter, ecosystems and perception."
-  >
+    content="Willian Santos is a visual artist based in Florianópolis, Brazil. His practice investigates painting, water, matter, ecosystems and perception."
+  />
 
-  <!-- Inter -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
     rel="stylesheet"
@@ -21,14 +21,10 @@
 
   <style>
 
-    /* =========================================================
-       RESET
-    ========================================================= */
-
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
@@ -36,17 +32,12 @@
     }
 
     body {
-      background: #fff;
-      color: #111;
+      background: #ffffff;
+      color: #111111;
       font-family: "Inter", Arial, Helvetica, sans-serif;
       font-weight: 400;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
     }
 
     a {
@@ -54,10 +45,14 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
 
-    /* =========================================================
+    /* ---------------------------------
        HEADER
-    ========================================================= */
+    --------------------------------- */
 
     header {
       position: fixed;
@@ -70,20 +65,21 @@
       justify-content: space-between;
       align-items: center;
 
-      padding: 22px 28px;
+      padding: 22px 30px;
 
-      font-size: 10px;
+      font-size: 12px;
       line-height: 1;
-      letter-spacing: 0.08em;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
 
-      mix-blend-mode: difference;
-      color: #fff;
+      background: rgba(255,255,255,0.94);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
     }
 
     .logo {
       font-weight: 500;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.09em;
     }
 
     nav {
@@ -102,22 +98,41 @@
       bottom: -5px;
       width: 0;
       height: 1px;
-      background: currentColor;
-      transition: width 0.3s ease;
+      background: #111;
+      transition: width 0.25s ease;
     }
 
     nav a:hover::after {
       width: 100%;
     }
 
+    /* ---------------------------------
+       GENERAL
+    --------------------------------- */
 
-    /* =========================================================
+    main {
+      width: 100%;
+    }
+
+    section {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* ---------------------------------
        HERO
-    ========================================================= */
+    --------------------------------- */
 
     .hero {
       min-height: 100vh;
-      padding: 92px 28px 28px;
+      padding-top: 110px;
+      padding-bottom: 50px;
 
       display: flex;
       flex-direction: column;
@@ -126,14 +141,14 @@
 
     .hero-image {
       width: 100%;
-      height: calc(100vh - 170px);
+      height: 67vh;
 
       display: flex;
       align-items: center;
       justify-content: center;
 
       overflow: hidden;
-      background: #fff;
+      background: #f7f7f7;
     }
 
     .hero-image img {
@@ -143,82 +158,59 @@
       object-position: center;
     }
 
+    .hero-bottom {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      padding-top: 30px;
+    }
+
     .hero-meta {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 20px;
-
-      padding-top: 18px;
-
-      font-size: 9px;
-      line-height: 1.45;
-      letter-spacing: 0.06em;
+      font-size: 11px;
+      line-height: 1.5;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .hero-meta div:nth-child(2) {
-      text-align: center;
-    }
+    .hero-intro {
+      max-width: 650px;
 
-    .hero-meta div:nth-child(3) {
-      text-align: right;
-    }
-
-
-    /* =========================================================
-       INTRO
-    ========================================================= */
-
-    .intro {
-      padding: 150px 28px 170px;
-
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 8vw;
-    }
-
-    .section-label {
-      font-size: 9px;
-      line-height: 1.4;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
-    }
-
-    .intro-text {
-      max-width: 850px;
-
-      font-size: clamp(25px, 3vw, 46px);
+      font-size: clamp(22px, 2.4vw, 38px);
       line-height: 1.08;
       letter-spacing: -0.035em;
-      font-weight: 400;
     }
 
+    /* ---------------------------------
+       SECTION LABEL
+    --------------------------------- */
 
-    /* =========================================================
-       WORKS
-    ========================================================= */
+    .section-label {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
 
-    .works-section {
-      padding: 0 28px 170px;
+      padding-top: 150px;
+      padding-bottom: 45px;
+
+      border-top: 1px solid #111;
     }
 
-    .section-heading {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-
-      padding-bottom: 35px;
-      border-bottom: 1px solid #111;
-
-      font-size: 9px;
+    .section-label span {
+      font-size: 11px;
       line-height: 1.4;
-      letter-spacing: 0.09em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
+
+    /* ---------------------------------
+       WORKS
+    --------------------------------- */
 
     .works-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
+
       column-gap: 38px;
       row-gap: 105px;
 
@@ -226,21 +218,14 @@
     }
 
     .work {
-      display: flex;
-      flex-direction: column;
       min-width: 0;
     }
-
-    /*
-      Todas as obras ocupam exatamente o mesmo
-      campo de apresentação.
-    */
 
     .work-image {
       width: 100%;
       aspect-ratio: 4 / 3;
 
-      background: #fff;
+      background: #ffffff;
 
       display: flex;
       align-items: center;
@@ -256,183 +241,162 @@
       object-fit: contain;
       object-position: center;
 
-      transition: transform 0.8s cubic-bezier(.2,.7,.2,1);
+      transition: transform 0.5s ease;
     }
 
     .work:hover .work-image img {
-      transform: scale(1.012);
+      transform: scale(1.015);
     }
 
     .work-info {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
 
-      padding-top: 15px;
+      padding-top: 13px;
+
+      font-size: 12px;
+      line-height: 1.4;
+      letter-spacing: 0.015em;
     }
 
     .work-title {
-      font-size: 12px;
-      line-height: 1.4;
-      letter-spacing: -0.01em;
       font-weight: 700;
     }
 
-    .work-details {
-      text-align: right;
-
-      font-size: 9px;
-      line-height: 1.55;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
+    .work-year {
       font-weight: 400;
+      color: #555;
     }
 
-
-    /* =========================================================
+    /* ---------------------------------
        RESEARCH
-    ========================================================= */
+    --------------------------------- */
 
     .research {
-      background: #111;
-      color: #fff;
-
-      padding: 160px 28px 180px;
+      padding-bottom: 120px;
     }
 
-    .research-header {
-      display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 8vw;
-
-      margin-bottom: 120px;
+    .research-text {
+      max-width: 980px;
     }
 
-    .research-title {
-      font-size: clamp(48px, 7vw, 110px);
-      line-height: 0.92;
-      letter-spacing: -0.055em;
-      font-weight: 400;
+    .research-text p {
+      font-size: clamp(24px, 3vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+
+      margin-bottom: 42px;
     }
 
-    .research-body {
-      max-width: 720px;
-      margin-left: calc(1fr + 8vw);
-
-      font-size: 20px;
-      line-height: 1.4;
-      letter-spacing: -0.015em;
+    .research-text p:last-child {
+      margin-bottom: 0;
     }
 
-    .research-body p + p {
-      margin-top: 35px;
-    }
-
-
-    /* =========================================================
+    /* ---------------------------------
        PROCESS
-    ========================================================= */
+    --------------------------------- */
 
     .process {
-      padding: 160px 28px;
+      padding-bottom: 130px;
+    }
 
+    .process-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 8vw;
+      gap: 38px;
+      align-items: start;
+    }
+
+    .process-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+
+      overflow: hidden;
+      background: #f7f7f7;
     }
 
     .process-image img {
       width: 100%;
-      height: auto;
+      height: 100%;
+
+      object-fit: cover;
+      object-position: center;
     }
 
-    .process-copy {
-      align-self: center;
+    .process-text {
       max-width: 600px;
+      padding-top: 2px;
     }
 
-    .process-copy h2 {
-      font-size: clamp(34px, 4vw, 62px);
+    .process-title {
+      font-size: clamp(28px, 3.5vw, 55px);
       line-height: 1;
       letter-spacing: -0.045em;
-      font-weight: 400;
 
-      margin-top: 28px;
-      margin-bottom: 45px;
+      margin-bottom: 35px;
     }
 
-    .process-copy p {
-      font-size: 17px;
+    .process-text p {
+      font-size: 16px;
       line-height: 1.5;
-      letter-spacing: -0.01em;
+
+      max-width: 540px;
+      margin-bottom: 22px;
     }
 
-    .process-copy p + p {
-      margin-top: 25px;
-    }
-
-
-    /* =========================================================
+    /* ---------------------------------
        ABOUT
-    ========================================================= */
+    --------------------------------- */
 
     .about {
-      padding: 100px 28px 180px;
+      padding-bottom: 130px;
+    }
 
+    .about-grid {
       display: grid;
-      grid-template-columns: 1fr 1.6fr;
-      gap: 8vw;
-
-      border-top: 1px solid #111;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
     }
 
-    .about-copy {
-      max-width: 760px;
+    .about-intro {
+      font-size: clamp(26px, 3vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+
+      max-width: 750px;
     }
 
-    .about-copy h2 {
-      font-size: clamp(40px, 5vw, 70px);
-      line-height: 0.95;
-      letter-spacing: -0.05em;
-      font-weight: 400;
+    .about-text {
+      max-width: 550px;
 
-      margin-bottom: 50px;
-    }
-
-    .about-copy p {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.55;
-      max-width: 680px;
     }
 
-    .about-copy p + p {
-      margin-top: 25px;
+    .about-text p {
+      margin-bottom: 22px;
     }
 
-
-    /* =========================================================
+    /* ---------------------------------
        CONTACT
-    ========================================================= */
+    --------------------------------- */
 
     .contact {
-      background: #111;
-      color: #fff;
-
-      padding: 95px 28px 35px;
-
-      min-height: 52vh;
+      min-height: 85vh;
 
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      padding-top: 120px;
+      padding-bottom: 30px;
+
+      border-top: 1px solid #111;
     }
 
-    /*
-      Menor e mais editorial.
-    */
-
     .contact-title {
-      font-size: clamp(48px, 7vw, 100px);
+      font-size: clamp(42px, 5vw, 72px);
       line-height: 0.9;
       letter-spacing: -0.055em;
       font-weight: 400;
@@ -445,15 +409,22 @@
 
       padding-top: 90px;
 
-      font-size: 9px;
+      font-size: 12px;
       line-height: 1.5;
       letter-spacing: 0.07em;
       text-transform: uppercase;
     }
 
+    .contact-name {
+      font-weight: 500;
+    }
+
     .contact-links {
       display: flex;
-      gap: 28px;
+      gap: 36px;
+
+      font-size: 12px;
+      font-weight: 500;
     }
 
     .contact-links a {
@@ -462,126 +433,39 @@
 
     .contact-links a::after {
       content: "";
+
       position: absolute;
       left: 0;
-      bottom: -5px;
-      width: 0;
+      bottom: -7px;
+
+      width: 100%;
       height: 1px;
-      background: #fff;
-      transition: width 0.3s ease;
+
+      background: #111;
+
+      transform: scaleX(0);
+      transform-origin: right;
+
+      transition: transform 0.25s ease;
     }
 
     .contact-links a:hover::after {
-      width: 100%;
+      transform: scaleX(1);
+      transform-origin: left;
     }
 
     .contact-copy {
       text-align: right;
     }
 
+    /* ---------------------------------
+       MOBILE
+    --------------------------------- */
 
-    /* =========================================================
-       RESPONSIVE — TABLET
-    ========================================================= */
-
-    @media (max-width: 900px) {
-
-      header {
-        padding: 18px;
-      }
-
-      nav {
-        gap: 16px;
-      }
-
-      .hero {
-        padding: 75px 18px 20px;
-      }
-
-      .hero-image {
-        height: calc(100vh - 145px);
-      }
-
-      .hero-meta {
-        grid-template-columns: 1fr 1fr;
-        row-gap: 6px;
-      }
-
-      .hero-meta div:nth-child(2) {
-        text-align: right;
-      }
-
-      .hero-meta div:nth-child(3) {
-        display: none;
-      }
-
-      .intro {
-        padding: 110px 18px 120px;
-
-        grid-template-columns: 1fr;
-        gap: 40px;
-      }
-
-      .works-section {
-        padding: 0 18px 120px;
-      }
-
-      .works-grid {
-        column-gap: 24px;
-        row-gap: 75px;
-      }
-
-      .research {
-        padding: 110px 18px 120px;
-      }
-
-      .research-header {
-        grid-template-columns: 1fr;
-        gap: 55px;
-        margin-bottom: 80px;
-      }
-
-      .research-body {
-        margin-left: 0;
-        font-size: 18px;
-      }
-
-      .process {
-        padding: 110px 18px;
-        grid-template-columns: 1fr;
-        gap: 65px;
-      }
-
-      .about {
-        padding: 80px 18px 120px;
-        grid-template-columns: 1fr;
-        gap: 60px;
-      }
-
-      .contact {
-        padding: 75px 18px 25px;
-        min-height: 55vh;
-      }
-
-      .contact-bottom {
-        grid-template-columns: 1fr;
-        align-items: start;
-        gap: 28px;
-      }
-
-      .contact-copy {
-        text-align: left;
-      }
-    }
-
-
-    /* =========================================================
-       RESPONSIVE — MOBILE
-    ========================================================= */
-
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
 
       header {
+        padding: 18px 18px;
         font-size: 9px;
       }
 
@@ -589,59 +473,136 @@
         gap: 12px;
       }
 
-      .hero-image img {
-        object-fit: cover;
+      section {
+        padding-left: 18px;
+        padding-right: 18px;
       }
 
-      .section-heading {
-        padding-bottom: 20px;
+      .hero {
+        padding-top: 75px;
+        padding-bottom: 35px;
+      }
+
+      .hero-image {
+        height: 60vh;
+      }
+
+      .hero-bottom {
+        grid-template-columns: 1fr;
+        gap: 25px;
+
+        padding-top: 22px;
+      }
+
+      .hero-intro {
+        font-size: 25px;
+      }
+
+      .section-label {
+        grid-template-columns: 1fr;
+
+        padding-top: 90px;
+        padding-bottom: 30px;
+
+        gap: 10px;
       }
 
       .works-grid {
         grid-template-columns: 1fr;
+
+        column-gap: 0;
         row-gap: 70px;
+
+        padding-top: 35px;
       }
 
       .work-info {
+        font-size: 11px;
+      }
+
+      .research {
+        padding-bottom: 80px;
+      }
+
+      .research-text p {
+        font-size: 29px;
+        margin-bottom: 32px;
+      }
+
+      .process {
+        padding-bottom: 90px;
+      }
+
+      .process-grid {
         grid-template-columns: 1fr;
-        gap: 4px;
+        gap: 35px;
       }
 
-      .work-details {
-        text-align: left;
+      .process-title {
+        font-size: 38px;
       }
 
-      .research-title {
-        font-size: 55px;
+      .process-text p {
+        font-size: 15px;
+      }
+
+      .about {
+        padding-bottom: 90px;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .about-intro {
+        font-size: 30px;
+      }
+
+      .about-text {
+        font-size: 15px;
+      }
+
+      .contact {
+        min-height: 75vh;
+        padding-top: 90px;
       }
 
       .contact-title {
         font-size: 58px;
       }
 
-      .contact-links {
-        flex-direction: column;
-        gap: 14px;
+      .contact-bottom {
+        grid-template-columns: 1fr;
+
+        gap: 28px;
+
+        padding-top: 70px;
+
+        font-size: 10px;
       }
 
+      .contact-links {
+        flex-wrap: wrap;
+        gap: 22px;
+
+        font-size: 12px;
+      }
+
+      .contact-copy {
+        text-align: left;
+      }
     }
 
   </style>
 </head>
 
-
 <body>
 
-
-  <!-- =======================================================
-       HEADER
-  ======================================================== -->
+  <!-- HEADER -->
 
   <header>
-
-    <a href="#top" class="logo">
-      Willian Santos
-    </a>
+    <a href="#top" class="logo">Willian Santos</a>
 
     <nav>
       <a href="#works">Works</a>
@@ -649,537 +610,431 @@
       <a href="#about">About</a>
       <a href="#contact">Contact</a>
     </nav>
-
   </header>
 
 
-  <!-- =======================================================
-       HERO
-  ======================================================== -->
-
   <main id="top">
 
+    <!-- HERO -->
+
     <section class="hero">
+      <div class="section-inner">
 
-      <div class="hero-image">
+        <div class="hero-image">
+          <img
+            src="Studio_inprogress.jpg"
+            alt="Willian Santos in the studio"
+          >
+        </div>
 
-        <img
-          src="Studio_inprogress.jpg"
-          alt="Willian Santos in the studio"
-        >
+        <div class="hero-bottom">
+
+          <div class="hero-meta">
+            Visual Artist<br>
+            Florianópolis · Brazil<br>
+            b. 1985
+          </div>
+
+          <div class="hero-intro">
+            A painting practice investigating water, matter and environment through the visible and invisible forces that sustain life.
+          </div>
+
+        </div>
 
       </div>
-
-      <div class="hero-meta">
-
-        <div>
-          Visual Artist
-        </div>
-
-        <div>
-          Florianópolis · Brazil
-        </div>
-
-        <div>
-          b. 1985
-        </div>
-
-      </div>
-
     </section>
 
 
-    <!-- =====================================================
-         INTRO
-    ====================================================== -->
+    <!-- WORKS -->
 
-    <section class="intro">
+    <section id="works">
 
-      <div class="section-label">
-        Practice
-      </div>
-
-      <div class="intro-text">
-        A painting practice investigating water, matter and environment through the visible and invisible forces that sustain life.
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         WORKS
-    ====================================================== -->
-
-    <section class="works-section" id="works">
-
-      <div class="section-heading">
-
-        <span>
-          Selected Works
-        </span>
-
-        <span>
-          2022—2026
-        </span>
-
-      </div>
-
-
-      <div class="works-grid">
-
-
-        <!-- 01 — PÉLAGOS I -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="pelagos-1.jpg"
-              alt="Pélagos I, 2026"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Pélagos I
-            </div>
-
-            <div class="work-details">
-              2026
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 02 — VÉSPER -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="vesper-25.jpg"
-              alt="Vésper, 2025"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Vésper
-            </div>
-
-            <div class="work-details">
-              2025
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 03 — ABLUIR -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="abluir-26.jpg"
-              alt="Abluir, 2026"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Abluir
-            </div>
-
-            <div class="work-details">
-              2026
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 04 — PÉLAGOS X -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Pelagos X_2026.jpg"
-              alt="Pélagos X, 2026"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Pélagos X
-            </div>
-
-            <div class="work-details">
-              2026
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 05 — DÉVICO -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Devico.jpg"
-              alt="Dévico, 2024"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Dévico
-            </div>
-
-            <div class="work-details">
-              2024
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 06 — TÓTEME -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Toteme_WS_24.jpg"
-              alt="Tóteme, 2024"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Tóteme
-            </div>
-
-            <div class="work-details">
-              2024
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 07 — CANIS LUPUS -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Canis Lupus.jpg"
-              alt="Canis Lupus"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Canis Lupus
-            </div>
-
-            <div class="work-details">
-              —
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 08 — ECOSFERA -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Ecosfera_22_WS.jpg"
-              alt="Ecosfera, 2022"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Ecosfera
-            </div>
-
-            <div class="work-details">
-              2022
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 09 — ENTRECHO III -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Entrecho III.jpg"
-              alt="Entrecho III"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Entrecho III
-            </div>
-
-            <div class="work-details">
-              —
-            </div>
-
-          </div>
-
-        </a>
-
-
-        <!-- 10 — SNAKE -->
-
-        <a class="work" href="#">
-
-          <div class="work-image">
-
-            <img
-              src="Snake_solo.jpg"
-              alt="Snake"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <div class="work-title">
-              Snake
-            </div>
-
-            <div class="work-details">
-              —
-            </div>
-
-          </div>
-
-        </a>
-
-
-      </div>
-
-    </section>
-
-
-    <!-- =====================================================
-         RESEARCH
-    ====================================================== -->
-
-    <section class="research" id="research">
-
-      <div class="research-header">
+      <div class="section-inner">
 
         <div class="section-label">
-          Research
+          <span>Works</span>
+          <span>Selected works</span>
         </div>
 
-        <div class="research-title">
-          The path of the eye<br>
-          and the path<br>
-          of the heart.
+
+        <div class="works-grid">
+
+          <!-- 01 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="pelagos-1.jpg"
+                alt="Pélagos I, 2026"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Pélagos I</span>
+              <span class="work-year">2026</span>
+            </div>
+
+          </article>
+
+
+          <!-- 02 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="vesper-25.jpg"
+                alt="Vésper, 2025"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Vésper</span>
+              <span class="work-year">2025</span>
+            </div>
+
+          </article>
+
+
+          <!-- 03 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="abluir-26.jpg"
+                alt="Abluir, 2026"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Abluir</span>
+              <span class="work-year">2026</span>
+            </div>
+
+          </article>
+
+
+          <!-- 04 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Pelagos X_2026.jpg"
+                alt="Pélagos X, 2026"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Pélagos X</span>
+              <span class="work-year">2026</span>
+            </div>
+
+          </article>
+
+
+          <!-- 05 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Devico.jpg"
+                alt="Dévico, 2024"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Dévico</span>
+              <span class="work-year">2024</span>
+            </div>
+
+          </article>
+
+
+          <!-- 06 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Toteme_WS_24.jpg"
+                alt="Tóteme, 2024"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Tóteme</span>
+              <span class="work-year">2024</span>
+            </div>
+
+          </article>
+
+
+          <!-- 07 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Canis Lupus.jpg"
+                alt="Canis Lupus"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Canis Lupus</span>
+              <span class="work-year"></span>
+            </div>
+
+          </article>
+
+
+          <!-- 08 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Ecosfera_22_WS.jpg"
+                alt="Ecosfera, 2022"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Ecosfera</span>
+              <span class="work-year">2022</span>
+            </div>
+
+          </article>
+
+
+          <!-- 09 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Entrecho III.jpg"
+                alt="Entrecho III"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Entrecho III</span>
+              <span class="work-year"></span>
+            </div>
+
+          </article>
+
+
+          <!-- 10 -->
+
+          <article class="work">
+
+            <div class="work-image">
+              <img
+                src="Snake_solo.jpg"
+                alt="Snake"
+              >
+            </div>
+
+            <div class="work-info">
+              <span class="work-title">Snake</span>
+              <span class="work-year"></span>
+            </div>
+
+          </article>
+
         </div>
-
-      </div>
-
-
-      <div class="research-body">
-
-        <p>
-          My research is driven by the curiosity to interpret life and by the alchemy present in the making of painting.
-        </p>
-
-        <p>
-          I am interested in a world revealed through two complementary paths: the path of the eye and the path of the heart.
-        </p>
-
-        <p>
-          Water is a central element within this investigation. Across oceans, ecosystems and different states of matter, it becomes a symptom of the presence of visible and invisible forces that sustain life.
-        </p>
-
-        <p>
-          The process is at the center of my practice. It is a self-provoked path of errors and discoveries, in which layers of paint continuously die and are reborn.
-        </p>
 
       </div>
 
     </section>
 
 
-    <!-- =====================================================
-         PROCESS
-    ====================================================== -->
+    <!-- RESEARCH -->
+
+    <section id="research" class="research">
+
+      <div class="section-inner">
+
+        <div class="section-label">
+          <span>Research</span>
+          <span>Painting, water, matter, ecosystems</span>
+        </div>
+
+
+        <div class="research-text">
+
+          <p>
+            My research is driven by the curiosity to interpret life and by the alchemy present in the making of painting.
+          </p>
+
+          <p>
+            I am interested in a world revealed through two complementary paths: the path of the eye and the path of the heart.
+          </p>
+
+          <p>
+            Water is a central element within this investigation. Across oceans, ecosystems and different states of matter, it becomes a symptom of the presence of visible and invisible forces that sustain life.
+          </p>
+
+          <p>
+            The process is at the center of my practice. It is a self-provoked path of errors and discoveries, in which layers of paint continuously die and are reborn.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PROCESS -->
 
     <section class="process">
 
-      <div class="process-image">
-
-        <img
-          src="Studio_inprogress.jpg"
-          alt="Willian Santos working in the studio"
-        >
-
-      </div>
-
-
-      <div class="process-copy">
+      <div class="section-inner">
 
         <div class="section-label">
-          Process
+          <span>Process</span>
+          <span>Material investigation</span>
         </div>
 
-        <h2>
-          The work begins before the image.
-        </h2>
 
-        <p>
-          Painting develops through an ongoing encounter with matter. The process is not simply a means toward an image, but a field of investigation in itself.
-        </p>
+        <div class="process-grid">
 
-        <p>
-          Materials are tested, combined, transformed and sometimes allowed to resist intention. Layers accumulate, disappear and return, creating a continuous movement between emergence and disappearance.
-        </p>
+          <div class="process-image">
+            <img
+              src="Studio_inprogress.jpg"
+              alt="Willian Santos working in the studio"
+            >
+          </div>
+
+
+          <div class="process-text">
+
+            <div class="process-title">
+              The work begins before the image.
+            </div>
+
+            <p>
+              Painting begins as an encounter with matter. Materials are tested, transformed, accumulated and allowed to resist intention.
+            </p>
+
+            <p>
+              Layers are built and removed, surfaces are interrupted and reconstructed, allowing the image to emerge through the process itself.
+            </p>
+
+            <p>
+              The studio becomes a place of continuous experimentation, where errors and discoveries remain active within the work.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- =====================================================
-         ABOUT
-    ====================================================== -->
+    <!-- ABOUT -->
 
-    <section class="about" id="about">
+    <section id="about" class="about">
 
-      <div class="section-label">
-        About
-      </div>
+      <div class="section-inner">
+
+        <div class="section-label">
+          <span>About</span>
+          <span>Willian Santos</span>
+        </div>
 
 
-      <div class="about-copy">
+        <div class="about-grid">
 
-        <h2>
-          Willian Santos
-        </h2>
+          <div class="about-intro">
+            Willian Santos is a Brazilian visual artist whose practice investigates painting, water, matter and ecosystems through processes of transformation and perception.
+          </div>
 
-        <p>
-          Born in Curitiba in 1985, Willian Santos lives and works in Florianópolis, Brazil.
-        </p>
 
-        <p>
-          He holds a Bachelor’s degree in Visual Arts from Universidade Tuiuti do Paraná, completed in 2009, and has developed his artistic practice for more than nineteen years.
-        </p>
+          <div class="about-text">
 
-        <p>
-          His practice encompasses painting, encaustic and mixed media, investigating relationships between water, matter, ecosystems, environment and perception.
-        </p>
+            <p>
+              Born in Curitiba in 1985, Santos lives and works in Florianópolis, Brazil.
+            </p>
 
-        <p>
-          Water has been a central element of his research since its beginning, expanding into broader investigations of material transformation, visible and invisible forces, and the conditions through which images emerge.
-        </p>
+            <p>
+              He holds a Bachelor’s degree in Visual Arts from Universidade Tuiuti do Paraná, completed in 2009, and has been working in the visual arts for more than 19 years.
+            </p>
+
+            <p>
+              His practice encompasses painting, encaustic and mixed media, with water occupying a central position in his research since its beginning.
+            </p>
+
+            <p>
+              His work explores the relationship between material processes, perception and the visible and invisible forces that sustain life.
+            </p>
+
+          </div>
+
+        </div>
 
       </div>
 
     </section>
 
 
-    <!-- =====================================================
-         CONTACT
-    ====================================================== -->
+    <!-- CONTACT -->
 
-    <section class="contact" id="contact">
+    <section id="contact" class="contact">
 
-      <div class="contact-title">
-        Let’s talk.
-      </div>
+      <div class="section-inner">
 
-
-      <div class="contact-bottom">
-
-        <div>
-          Willian Santos<br>
-          Florianópolis · Brazil
+        <div class="contact-title">
+          Let’s talk.
         </div>
 
 
-        <div class="contact-links">
+        <div class="contact-bottom">
 
-          <a href="mailto:contact@williansantos.com">
-            Email
-          </a>
-
-          <a
-            href="https://www.instagram.com/williansantos_studio/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Instagram
-          </a>
-
-          <a
-            href="https://pt.wikipedia.org/wiki/Willian_Santos"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Wikipedia
-          </a>
-
-        </div>
+          <div class="contact-name">
+            Willian Santos<br>
+            Florianópolis · Brazil
+          </div>
 
 
-        <div class="contact-copy">
-          © 2026 Willian Santos
+          <div class="contact-links">
+
+            <a href="mailto:contact@williansantos.com">
+              Email
+            </a>
+
+            <a
+              href="https://www.instagram.com/williansantos_studio/"
+              target="_blank"
+              rel="noopener"
+            >
+              Instagram
+            </a>
+
+            <a
+              href="https://pt.wikipedia.org/wiki/Willian_Santos"
+              target="_blank"
+              rel="noopener"
+            >
+              Wikipedia
+            </a>
+
+          </div>
+
+
+          <div class="contact-copy">
+            © 2026 Willian Santos
+          </div>
+
         </div>
 
       </div>
