@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Works — Willian Santos</title>
 
   <meta
     name="description"
-    content="Selected works by Brazilian visual artist Willian Santos."
-  />
+    content="Selected works by Willian Santos."
+  >
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,12 +32,10 @@
     }
 
     body {
-      background: #ffffff;
-      color: #111111;
-
+      background: #fff;
+      color: #111;
       font-family: "Inter", Arial, Helvetica, sans-serif;
       font-weight: 400;
-
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
     }
@@ -53,34 +51,33 @@
     }
 
 
-    /* ---------------------------------
+    /* ================================
        HEADER
-    --------------------------------- */
+    ================================= */
 
     header {
       position: fixed;
       top: 0;
       left: 0;
-
       width: 100%;
-      z-index: 1000;
+      z-index: 100;
 
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
 
       padding: 22px 30px;
+
+      background: rgba(255,255,255,0.95);
+
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
 
       font-size: 12px;
       line-height: 1;
 
       letter-spacing: 0.07em;
       text-transform: uppercase;
-
-      background: rgba(255,255,255,0.94);
-
-      backdrop-filter: blur(8px);
-      -webkit-backdrop-filter: blur(8px);
     }
 
     .logo {
@@ -109,7 +106,7 @@
 
       background: #111;
 
-      transition: width 0.25s ease;
+      transition: width .25s ease;
     }
 
     nav a:hover::after {
@@ -117,9 +114,9 @@
     }
 
 
-    /* ---------------------------------
-       MAIN
-    --------------------------------- */
+    /* ================================
+       PAGE
+    ================================= */
 
     main {
       width: 100%;
@@ -132,21 +129,19 @@
       margin: 0 auto;
 
       padding:
-        145px
+        125px
         30px
         120px;
     }
 
 
-    /* ---------------------------------
-       PAGE INTRO
-    --------------------------------- */
+    /* ================================
+       INTRO
+    ================================= */
 
     .page-intro {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 40px;
 
       padding-bottom: 45px;
@@ -158,23 +153,23 @@
       font-size: 11px;
       line-height: 1.4;
 
-      letter-spacing: 0.08em;
+      letter-spacing: .08em;
       text-transform: uppercase;
     }
 
     .page-description {
-      max-width: 650px;
+      max-width: 680px;
 
       font-size: clamp(24px, 3vw, 42px);
       line-height: 1.08;
 
-      letter-spacing: -0.04em;
+      letter-spacing: -.04em;
     }
 
 
-    /* ---------------------------------
+    /* ================================
        WORKS GRID
-    --------------------------------- */
+    ================================= */
 
     .works-grid {
       display: grid;
@@ -183,15 +178,15 @@
         repeat(2, minmax(0, 1fr));
 
       column-gap: 38px;
-      row-gap: 105px;
+      row-gap: 100px;
 
       padding-top: 55px;
     }
 
 
-    /* ---------------------------------
+    /* ================================
        WORK
-    --------------------------------- */
+    ================================= */
 
     .work {
       min-width: 0;
@@ -199,14 +194,13 @@
 
     .work-image {
       width: 100%;
-
       aspect-ratio: 4 / 3;
-
-      background: #ffffff;
 
       display: flex;
       align-items: center;
       justify-content: center;
+
+      background: #fff;
 
       overflow: hidden;
     }
@@ -218,31 +212,29 @@
       object-fit: contain;
       object-position: center;
 
-      transition:
-        transform 0.5s ease;
+      transition: transform .45s ease;
     }
 
     .work:hover .work-image img {
-      transform: scale(1.015);
+      transform: scale(1.012);
     }
 
 
-    /* ---------------------------------
-       WORK INFORMATION
-    --------------------------------- */
+    /* ================================
+       INFORMATION
+    ================================= */
 
     .work-info {
       display: flex;
-
-      justify-content: space-between;
       align-items: baseline;
+      justify-content: space-between;
 
       padding-top: 13px;
 
       font-size: 12px;
       line-height: 1.4;
 
-      letter-spacing: 0.015em;
+      letter-spacing: .015em;
     }
 
     .work-title {
@@ -250,18 +242,16 @@
     }
 
     .work-year {
+      color: #555;
       font-weight: 400;
-      color: #555555;
     }
 
 
-    /* ---------------------------------
+    /* ================================
        FOOTER
-    --------------------------------- */
+    ================================= */
 
     footer {
-      width: 100%;
-
       border-top: 1px solid #111;
 
       padding:
@@ -272,27 +262,24 @@
       font-size: 10px;
       line-height: 1.5;
 
-      letter-spacing: 0.07em;
+      letter-spacing: .07em;
       text-transform: uppercase;
     }
 
     .footer-inner {
+      width: 100%;
       max-width: 1600px;
+
       margin: 0 auto;
 
       display: grid;
-
-      grid-template-columns:
-        1fr
-        auto
-        1fr;
-
+      grid-template-columns: 1fr auto 1fr;
       align-items: end;
     }
 
     .footer-links {
       display: flex;
-      gap: 28px;
+      gap: 30px;
     }
 
     .footer-links a {
@@ -303,7 +290,6 @@
       content: "";
 
       position: absolute;
-
       left: 0;
       bottom: -5px;
 
@@ -312,13 +298,10 @@
 
       background: #111;
 
-      transform:
-        scaleX(0);
-
+      transform: scaleX(0);
       transform-origin: right;
 
-      transition:
-        transform 0.25s ease;
+      transition: transform .25s ease;
     }
 
     .footer-links a:hover::after {
@@ -331,9 +314,9 @@
     }
 
 
-    /* ---------------------------------
+    /* ================================
        MOBILE
-    --------------------------------- */
+    ================================= */
 
     @media (max-width: 800px) {
 
@@ -346,18 +329,15 @@
         gap: 12px;
       }
 
-
       .page {
         padding:
-          100px
+          95px
           18px
           80px;
       }
 
-
       .page-intro {
         grid-template-columns: 1fr;
-
         gap: 18px;
 
         padding-bottom: 30px;
@@ -366,7 +346,6 @@
       .page-description {
         font-size: 29px;
       }
-
 
       .works-grid {
         grid-template-columns: 1fr;
@@ -377,38 +356,29 @@
         padding-top: 35px;
       }
 
-
       .work-info {
         font-size: 11px;
       }
 
-
       footer {
         padding:
           25px
-          18px
-          25px;
-
-        font-size: 9px;
+          18px;
       }
 
       .footer-inner {
         grid-template-columns: 1fr;
-
         gap: 25px;
       }
 
       .footer-links {
         flex-wrap: wrap;
-        gap: 20px;
-
-        font-size: 10px;
+        gap: 22px;
       }
 
       .footer-copy {
         text-align: left;
       }
-
     }
 
   </style>
@@ -422,36 +392,18 @@
 
   <header>
 
-    <a
-      href="index.html"
-      class="logo"
-    >
+    <a href="index.html" class="logo">
       Willian Santos
     </a>
 
-
     <nav>
-
-      <a href="index.html#works">
-        Works
-      </a>
-
-      <a href="index.html#research">
-        Research
-      </a>
-
-      <a href="index.html#about">
-        About
-      </a>
-
-      <a href="index.html#contact">
-        Contact
-      </a>
-
+      <a href="index.html#works">Works</a>
+      <a href="index.html#research">Research</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
 
   </header>
-
 
 
   <!-- MAIN -->
@@ -469,7 +421,6 @@
           Works
         </div>
 
-
         <div class="page-description">
           Selected works from an ongoing investigation into painting, water, matter and ecosystems.
         </div>
@@ -477,463 +428,310 @@
       </div>
 
 
-
       <!-- WORKS -->
 
       <div class="works-grid">
 
 
-        <!-- 01 -->
+        <!-- 01 — PÉLAGOS I -->
 
         <article class="work">
 
           <div class="work-image">
-
             <img
               src="pelagos-1.jpg"
-              alt="Pélagos I, 2026"
+              alt="Pélagos I"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Pélagos I
-            </span>
-
-            <span class="work-year">
-              2026
-            </span>
-
+            <span class="work-title">Pélagos I</span>
+            <span class="work-year">2026</span>
           </div>
 
         </article>
 
 
-
-        <!-- 02 -->
+        <!-- 02 — VÉSPER -->
 
         <article class="work">
 
           <div class="work-image">
-
             <img
               src="vesper-25.jpg"
-              alt="Vésper, 2025"
+              alt="Vésper"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Vésper
-            </span>
-
-            <span class="work-year">
-              2025
-            </span>
-
+            <span class="work-title">Vésper</span>
+            <span class="work-year">2025</span>
           </div>
 
         </article>
 
 
-
-        <!-- 03 -->
+        <!-- 03 — ABLUIR -->
 
         <article class="work">
 
           <div class="work-image">
-
             <img
               src="abluir-26.jpg"
-              alt="Abluir, 2026"
+              alt="Abluir"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Abluir
-            </span>
-
-            <span class="work-year">
-              2026
-            </span>
-
+            <span class="work-title">Abluir</span>
+            <span class="work-year">2026</span>
           </div>
 
         </article>
 
 
-
-        <!-- 04 -->
+        <!-- 04 — PÉLAGOS X -->
 
         <article class="work">
 
           <div class="work-image">
-
             <img
               src="Pelagos X_2026.jpg"
-              alt="Pélagos X, 2026"
+              alt="Pélagos X"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Pélagos X
-            </span>
-
-            <span class="work-year">
-              2026
-            </span>
-
+            <span class="work-title">Pélagos X</span>
+            <span class="work-year">2026</span>
           </div>
 
         </article>
 
 
-
-        <!-- 05 -->
+        <!-- 05 — ARRIBA -->
 
         <article class="work">
 
           <div class="work-image">
+            <img
+              src="ARRIBA_2017_WILLIAN SANTOS.jpg"
+              alt="ARRIBA"
+            >
+          </div>
 
+          <div class="work-info">
+            <span class="work-title">ARRIBA</span>
+            <span class="work-year">2017</span>
+          </div>
+
+        </article>
+
+
+        <!-- 06 — DESPERTAR DO DELTA -->
+
+        <article class="work">
+
+          <div class="work-image">
+            <img
+              src="Despertar do delta_2025_WS.jpg"
+              alt="Despertar do Delta"
+            >
+          </div>
+
+          <div class="work-info">
+            <span class="work-title">Despertar do Delta</span>
+            <span class="work-year">2025</span>
+          </div>
+
+        </article>
+
+
+        <!-- 07 — OUROBOROS -->
+
+        <article class="work">
+
+          <div class="work-image">
             <img
               src="Ouroboros.jpg"
               alt="Ouroboros"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Ouroboros
-            </span>
-
-            <span class="work-year">
-            </span>
-
+            <span class="work-title">Ouroboros</span>
+            <span class="work-year"></span>
           </div>
 
         </article>
 
 
-
-        <!-- 06 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
-            <img
-              src="Devico.jpg"
-              alt="Dévico, 2024"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              Dévico
-            </span>
-
-            <span class="work-year">
-              2024
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 07 -->
+        <!-- 08 — DUO -->
 
         <article class="work">
 
           <div class="work-image">
-
-            <img
-              src="Despertar do delta_2025_WS.jpg"
-              alt="Despertar do Delta, 2025"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              Despertar do Delta
-            </span>
-
-            <span class="work-year">
-              2025
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 08 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
-            <img
-              src="Toteme_WS_24.jpg"
-              alt="Tóteme, 2024"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              Tóteme
-            </span>
-
-            <span class="work-year">
-              2024
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 09 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
-            <img
-              src="Canis Lupus.jpg"
-              alt="Canis Lupus"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              Canis Lupus
-            </span>
-
-            <span class="work-year">
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 10 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
-            <img
-              src="Ecosfera_22_WS.jpg"
-              alt="Ecosfera, 2022"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              Ecosfera
-            </span>
-
-            <span class="work-year">
-              2022
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 11 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
-            <img
-              src="Entrecho III.jpg"
-              alt="Entrecho III"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              Entrecho III
-            </span>
-
-            <span class="work-year">
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 12 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
             <img
               src="Duo.jpg"
               alt="Duo"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Duo
-            </span>
-
-            <span class="work-year">
-            </span>
-
+            <span class="work-title">Duo</span>
+            <span class="work-year"></span>
           </div>
 
         </article>
 
 
-
-        <!-- 13 -->
-
-        <article class="work">
-
-          <div class="work-image">
-
-            <img
-              src="ARRIBA_2017_WILLIAN SANTOS.jpg"
-              alt="ARRIBA, 2017"
-            >
-
-          </div>
-
-          <div class="work-info">
-
-            <span class="work-title">
-              ARRIBA
-            </span>
-
-            <span class="work-year">
-              2017
-            </span>
-
-          </div>
-
-        </article>
-
-
-
-        <!-- 14 -->
+        <!-- 09 — DESIRE LAKE -->
 
         <article class="work">
 
           <div class="work-image">
-
             <img
               src="Desire lake_WillianSantos.jpg"
               alt="Desire Lake"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Desire Lake
-            </span>
-
-            <span class="work-year">
-            </span>
-
+            <span class="work-title">Desire Lake</span>
+            <span class="work-year"></span>
           </div>
 
         </article>
 
 
-
-        <!-- 15 -->
+        <!-- 10 — DÉVICO -->
 
         <article class="work">
 
           <div class="work-image">
-
             <img
-              src="ProdromoWillanSantos.jpg"
-              alt="Pródromo"
+              src="Devico.jpg"
+              alt="Dévico"
             >
-
           </div>
 
           <div class="work-info">
-
-            <span class="work-title">
-              Pródromo
-            </span>
-
-            <span class="work-year">
-            </span>
-
+            <span class="work-title">Dévico</span>
+            <span class="work-year">2024</span>
           </div>
 
         </article>
 
 
-
-        <!-- 16 -->
+        <!-- 11 — TÓTEME -->
 
         <article class="work">
 
           <div class="work-image">
+            <img
+              src="Toteme_WS_24.jpg"
+              alt="Tóteme"
+            >
+          </div>
 
+          <div class="work-info">
+            <span class="work-title">Tóteme</span>
+            <span class="work-year">2024</span>
+          </div>
+
+        </article>
+
+
+        <!-- 12 — CANIS LUPUS -->
+
+        <article class="work">
+
+          <div class="work-image">
+            <img
+              src="Canis Lupus.jpg"
+              alt="Canis Lupus"
+            >
+          </div>
+
+          <div class="work-info">
+            <span class="work-title">Canis Lupus</span>
+            <span class="work-year"></span>
+          </div>
+
+        </article>
+
+
+        <!-- 13 — ECOSFERA -->
+
+        <article class="work">
+
+          <div class="work-image">
+            <img
+              src="Ecosfera_22_WS.jpg"
+              alt="Ecosfera"
+            >
+          </div>
+
+          <div class="work-info">
+            <span class="work-title">Ecosfera</span>
+            <span class="work-year">2022</span>
+          </div>
+
+        </article>
+
+
+        <!-- 14 — ENTRECHO III -->
+
+        <article class="work">
+
+          <div class="work-image">
+            <img
+              src="Entrecho III.jpg"
+              alt="Entrecho III"
+            >
+          </div>
+
+          <div class="work-info">
+            <span class="work-title">Entrecho III</span>
+            <span class="work-year"></span>
+          </div>
+
+        </article>
+
+
+        <!-- 15 — SNAKE -->
+
+        <article class="work">
+
+          <div class="work-image">
             <img
               src="Snake_solo.jpg"
               alt="Snake"
             >
-
           </div>
 
           <div class="work-info">
+            <span class="work-title">Snake</span>
+            <span class="work-year"></span>
+          </div>
 
-            <span class="work-title">
-              Snake
-            </span>
+        </article>
 
-            <span class="work-year">
-            </span>
 
+        <!-- 16 — SITE SPECIFIC -->
+
+        <article class="work">
+
+          <div class="work-image">
+            <img
+              src="sitespecific-1.jpg"
+              alt="Site Specific"
+            >
+          </div>
+
+          <div class="work-info">
+            <span class="work-title">Site Specific</span>
+            <span class="work-year"></span>
           </div>
 
         </article>
@@ -946,19 +744,16 @@
   </main>
 
 
-
   <!-- FOOTER -->
 
   <footer>
 
     <div class="footer-inner">
 
-
       <div>
         Willian Santos<br>
         Florianópolis · Brazil
       </div>
-
 
       <div class="footer-links">
 
@@ -984,11 +779,9 @@
 
       </div>
 
-
       <div class="footer-copy">
         © 2026 Willian Santos
       </div>
-
 
     </div>
 
