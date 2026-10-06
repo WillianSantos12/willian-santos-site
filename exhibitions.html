@@ -3,16 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Exhibitions — Willian Santos</title>
-  <meta name="description" content="Exhibitions by Willian Santos — solo and group exhibitions." />
+
+  <meta
+    name="description"
+    content="Selected exhibitions, art fairs and institutional presentations by Willian Santos."
+  />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  >
+
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* =========================================================
+       EXHIBITIONS
+       ========================================================= */
+
+    .exhibitions-page {
+      padding-bottom: 120px;
+    }
+
+    .exhibitions-intro {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      padding: 0 0 90px 0;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .exhibitions-title {
+      font-size: 13px;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .exhibitions-intro-text {
+      max-width: 680px;
+      font-size: 20px;
+      line-height: 1.45;
+      font-weight: 400;
+    }
+
+    .exhibitions-section {
+      padding: 80px 0 0;
+    }
+
+    .exhibitions-section-header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 40px;
+      margin-bottom: 35px;
+    }
+
+    .exhibitions-section-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 500;
+    }
+
+    .exhibitions-section-title {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: #777;
+    }
+
+    .exhibition-list {
+      border-top: 1px solid #ddd;
+    }
+
+    .exhibition {
+      display: grid;
+      grid-template-columns: 90px minmax(0, 1fr) 260px;
+      gap: 30px;
+      padding: 22px 0;
+      border-bottom: 1px solid #ddd;
+      align-items: baseline;
+    }
+
+    .exhibition-year {
+      font-size: 13px;
+      color: #777;
+    }
+
+    .exhibition-name {
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .exhibition-place {
+      font-size: 13px;
+      line-height: 1.4;
+      color: #777;
+    }
+
+    .exhibition-name em {
+      font-style: normal;
+    }
+
+    /* Featured solo exhibitions */
+
+    .featured-exhibitions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 70px 40px;
+      margin-top: 10px;
+    }
+
+    .featured-exhibition {
+      display: block;
+    }
+
+    .featured-image {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      background: #f1f1f1;
+      overflow: hidden;
+      margin-bottom: 18px;
+    }
+
+    .featured-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .featured-info {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: baseline;
+    }
+
+    .featured-name {
+      font-size: 17px;
+      line-height: 1.35;
+    }
+
+    .featured-meta {
+      font-size: 13px;
+      color: #777;
+      white-space: nowrap;
+    }
+
+    .featured-place {
+      margin-top: 5px;
+      font-size: 13px;
+      color: #777;
+    }
+
+    /* Responsive */
+
+    @media (max-width: 800px) {
+
+      .exhibitions-intro {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-bottom: 60px;
+      }
+
+      .exhibitions-intro-text {
+        font-size: 18px;
+      }
+
+      .exhibitions-section {
+        padding-top: 60px;
+      }
+
+      .exhibitions-section-header {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .exhibition {
+        grid-template-columns: 55px minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .exhibition-place {
+        grid-column: 2;
+        margin-top: -12px;
+      }
+
+      .featured-exhibitions {
+        grid-template-columns: 1fr;
+        gap: 55px;
+      }
+
+      .featured-info {
+        grid-template-columns: 1fr auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
+
 <header>
   <a href="index.html" class="logo">Willian Santos</a>
+
   <nav>
     <a href="index.html#works">Works</a>
     <a href="exhibitions.html">Exhibitions</a>
@@ -22,86 +220,557 @@
     <a href="index.html#contact">Contact</a>
   </nav>
 </header>
+
+
 <main>
-  <div class="page">
-    <div class="page-intro">
-      <div class="page-label">Exhibitions</div>
-      <div class="page-description">Selected exhibitions, fairs and institutional presentations from 2007 to the present.</div>
+
+  <div class="page exhibitions-page">
+
+    <!-- INTRO -->
+
+    <div class="exhibitions-intro">
+
+      <div class="exhibitions-title">
+        Exhibitions
+      </div>
+
+      <div class="exhibitions-intro-text">
+        Selected exhibitions, art fairs and institutional presentations
+        from 2007 to the present.
+      </div>
+
     </div>
 
-    <section class="cv-section">
-      <div class="section-label"><span>Exposições individuais</span><span>Solo Exhibitions</span></div>
-      <div class="cv-entry-list">
-        <div class="cv-row"><div class="cv-year">2026</div><div>Vésper, Centro Cultural VERAS, Florianópolis-SC</div></div>
-        <div class="cv-row"><div class="cv-year">2025</div><div>Águas Compostas, Zipper Galeria, São Paulo-SP</div></div>
-        <div class="cv-row"><div class="cv-year">2018</div><div>Recôndito Plasmado, SIM Galeria, Curitiba-PR</div></div>
-        <div class="cv-row"><div class="cv-year">2013</div><div>nem todo líquido se desmancha em ar, Galeria Casa da Imagem, Curitiba-PR</div></div>
-        <div class="cv-row"><div class="cv-year">2012</div><div>Desenhos, Museu de Arte de Joinville – MAJ, Joinville-SC</div></div>
-        <div class="cv-row"><div class="cv-year">2012</div><div>Imanência, Finnacena Escritório de Arte, Curitiba-PR</div></div>
-        <div class="cv-row"><div class="cv-year">2011</div><div>Campo Dilatado, SESC da Esquina, Curitiba-PR</div></div>
+
+    <!-- SOLO EXHIBITIONS -->
+
+    <section class="exhibitions-section">
+
+      <div class="exhibitions-section-header">
+
+        <div class="exhibitions-section-label">
+          Solo Exhibitions
+        </div>
+
+        <div class="exhibitions-section-title">
+          Selected
+        </div>
+
       </div>
+
+
+      <div class="exhibition-list">
+
+        <div class="exhibition">
+          <div class="exhibition-year">2026</div>
+          <div class="exhibition-name"><em>Vésper</em></div>
+          <div class="exhibition-place">
+            Centro Cultural VERAS · Florianópolis, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2025</div>
+          <div class="exhibition-name"><em>Águas Compostas</em></div>
+          <div class="exhibition-place">
+            Zipper Galeria · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2018</div>
+          <div class="exhibition-name"><em>Recôndito Plasmado</em></div>
+          <div class="exhibition-place">
+            Simões de Assis Galeria · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2013</div>
+          <div class="exhibition-name">
+            <em>nem todo líquido se desmancha em ar</em>
+          </div>
+          <div class="exhibition-place">
+            Galeria Casa da Imagem · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2012</div>
+          <div class="exhibition-name"><em>Desenhos</em></div>
+          <div class="exhibition-place">
+            Museu de Arte de Joinville – MAJ · Joinville, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2012</div>
+          <div class="exhibition-name"><em>Imanência</em></div>
+          <div class="exhibition-place">
+            Finnacena Escritório de Arte · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2011</div>
+          <div class="exhibition-name"><em>Campo Dilatado</em></div>
+          <div class="exhibition-place">
+            SESC da Esquina · Curitiba, Brazil
+          </div>
+        </div>
+
+      </div>
+
     </section>
 
-    <section class="cv-section">
-      <div class="section-label"><span>Exposições coletivas</span><span>Group Exhibitions</span></div>
-      <div class="cv-entry-list">
 
-          <div class="cv-row"><div class="cv-year">2026</div><div>Margens e Miragens, ArPa_Zipper Galeria, São Paulo-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2026</div><div>Matéria encantada, Galeria Mamute, São Paulo-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2025</div><div>{ [ ( Entre ) ] }, Galeria Ybakatu, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2025</div><div>SP-Arte ROTAS, Galeria Mamute, São Paulo</div></div>
-          <div class="cv-row"><div class="cv-year">2025</div><div>No tempo das sutilezas, Galeria Mamute, São Paulo</div></div>
-          <div class="cv-row"><div class="cv-year">2025</div><div>SP-Arte 2025, Zipper Galeria, São Paulo</div></div>
-          <div class="cv-row"><div class="cv-year">2024</div><div>Poéticas da Natureza, Galeria Mamute, São Paulo-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2024</div><div>Pontos de vida - Coleção Catarina de Ylmar Corrêa Neto, Centro Cultural VERAS, Florianópolis-SC</div></div>
-          <div class="cv-row"><div class="cv-year">2024</div><div>Antes e agora, longe e aqui dentro, MON_Museu Oscar Niemeyer, Curitiba</div></div>
-          <div class="cv-row"><div class="cv-year">2024</div><div>Objeto Sujeito, MUPA_Museu Paranaense, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2023</div><div>Comunidade de ressonância, Centro Cultural Veras, Florianópolis-SC</div></div>
-          <div class="cv-row"><div class="cv-year">2023</div><div>VERA + VERAS, Edifício Vera, São Paulo-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2022</div><div>Infinitos Campos Gerais II, Campo das Artes, Balsa Nova_São Luiz do Purunã-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2022</div><div>Sou Patrono_Acervo, MON_Museu Oscar Niemeyer, Curitiba</div></div>
-          <div class="cv-row"><div class="cv-year">2021</div><div>Afinidades, MON_Museu Oscar Niemeyer, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2021</div><div>A Razão dos Loucos, SOMA Galeria, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2021</div><div>A Razão dos Loucos, Mamute Galeria, Porto Alegre-RS</div></div>
-          <div class="cv-row"><div class="cv-year">2021</div><div>Oceano de Incertezas, SOMA Galeria, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2021</div><div>A Razão dos Loucos, Lona Galeria, São Paulo-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2021</div><div>ArtRio, SOMA Galeria, Marina da Glória, Rio de Janeiro-RJ</div></div>
-          <div class="cv-row"><div class="cv-year">2020</div><div>PIPA em casa, mostra virtual_ www.premiopipa.com/em-casa</div></div>
-          <div class="cv-row"><div class="cv-year">2019</div><div>Geraldo Leão - Declaração de Princípios, MON_Museu Oscar Niemeyer, Curitiba</div></div>
-          <div class="cv-row"><div class="cv-year">2019</div><div>ArtRio, SOMA Galeria, Marina da Glória, Rio de Janeiro-RJ</div></div>
-          <div class="cv-row"><div class="cv-year">2019</div><div>Com Título e Sem Título, Técnicas e Dimensões Variadas, MON_Museu Oscar Niemeyer, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2018</div><div>GAMA, Soma Galeria, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2018</div><div>Queermuseu: Cartografias da diferença na arte brasileira, Cavalariças - Escola de Artes Visuais do Parque Lage, Rio de Janeiro-RJ-Brasil</div></div>
-          <div class="cv-row"><div class="cv-year">2018</div><div>SP-Arte, SIM Galeria, Pavilhão da Bienal, São Paulo-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2018</div><div>Cada vez mais perto, Edifício Santa Rosa | Praça Tiradentes, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2018</div><div>Infinitos Campos Gerais, Fazenda Capão Alto | Patrimônio Cultural, Castro-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2017</div><div>Queermuseu: Cartografias da diferença na arte brasileira, Santander Cultural, Porto Alegre-RS</div></div>
-          <div class="cv-row"><div class="cv-year">2017</div><div>PINTURA [diálogo de artistas], Caixa Cultural, Rio de Janeiro-RJ</div></div>
-          <div class="cv-row"><div class="cv-year">2016</div><div>19º Edital de Incentivo à Produção Chico Lisboa, Museu de Arte do Rio Grande do Sul Ado Malagoli – MARGS, Porto Alegre-RS</div></div>
-          <div class="cv-row"><div class="cv-year">2015</div><div>Berliner Liste - Art Fair, Boiler Gallery, Berlin - Germany</div></div>
-          <div class="cv-row"><div class="cv-year">2015</div><div>"aí estão elas que se diz já foram e nunca faltam", Galeria Casa Imagem, Curitiba</div></div>
-          <div class="cv-row"><div class="cv-year">2015</div><div>40º SARP - Salão de Arte de Ribeirão Preto, MARP Museu de Arte de Ribeirão Preto-SP</div></div>
-          <div class="cv-row"><div class="cv-year">2015</div><div>LIMIAR, SIM Galeria, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2014</div><div>Para além dos sóis de outros sistemas e astros remotos, Atelier SOMA, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2014</div><div>Qu’est-ce que c’est la photographie?, Galeria Casa da Imagem, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2013</div><div>Construções de Ilusão, Bienal Internacional de Curitiba, SESC Paço da Liberdade, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2012</div><div>9, Museu de Arte da Universidade Federal do Paraná - MusA, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2011</div><div>CARAMBOLAGE, Studio LUXLAB, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2011</div><div>Grupo de Pintura Geraldo Leão, DeArtes – Universidade Federal do Paraná - UFPR, Curitiba-PR</div></div>
-          <div class="cv-row"><div class="cv-year">2008</div><div>Possíveis Conexões, Museu de Arte Contemporânea do Paraná - MAC, Curitiba</div></div>
-          <div class="cv-row"><div class="cv-year">2008</div><div>Intervenção urbana realizada junto à Prefeitura da Cidade de Curitiba-PR, Museu Metropolitano de Arte de Curitiba – MUMA</div></div>
-          <div class="cv-row"><div class="cv-year">2007</div><div>Múltiplos, Museu Alfredo Andersen, Curitiba-PR</div></div>
-        
+    <!-- GROUP EXHIBITIONS -->
+
+    <section class="exhibitions-section">
+
+      <div class="exhibitions-section-header">
+
+        <div class="exhibitions-section-label">
+          Group Exhibitions
+        </div>
+
+        <div class="exhibitions-section-title">
+          Selected
+        </div>
+
       </div>
+
+
+      <div class="exhibition-list">
+
+        <div class="exhibition">
+          <div class="exhibition-year">2026</div>
+          <div class="exhibition-name"><em>Margens e Miragens</em></div>
+          <div class="exhibition-place">
+            ArPa · Zipper Galeria · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2026</div>
+          <div class="exhibition-name"><em>Matéria encantada</em></div>
+          <div class="exhibition-place">
+            Galeria Mamute · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2025</div>
+          <div class="exhibition-name"><em>{ [ ( Entre ) ] }</em></div>
+          <div class="exhibition-place">
+            Galeria Ybakatu · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2025</div>
+          <div class="exhibition-name"><em>SP-Arte ROTAS</em></div>
+          <div class="exhibition-place">
+            Galeria Mamute · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2025</div>
+          <div class="exhibition-name"><em>No tempo das sutilezas</em></div>
+          <div class="exhibition-place">
+            Galeria Mamute · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2025</div>
+          <div class="exhibition-name"><em>SP-Arte 2025</em></div>
+          <div class="exhibition-place">
+            Zipper Galeria · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2024</div>
+          <div class="exhibition-name"><em>Poéticas da Natureza</em></div>
+          <div class="exhibition-place">
+            Galeria Mamute · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2024</div>
+          <div class="exhibition-name"><em>Pontos de vida</em></div>
+          <div class="exhibition-place">
+            Coleção Catarina de Ylmar Corrêa Neto · Centro Cultural VERAS · Florianópolis
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2024</div>
+          <div class="exhibition-name"><em>Antes e agora, longe e aqui dentro</em></div>
+          <div class="exhibition-place">
+            MON – Museu Oscar Niemeyer · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2024</div>
+          <div class="exhibition-name"><em>Objeto Sujeito</em></div>
+          <div class="exhibition-place">
+            MUPA – Museu Paranaense · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2023</div>
+          <div class="exhibition-name"><em>Comunidade de ressonância</em></div>
+          <div class="exhibition-place">
+            Centro Cultural VERAS · Florianópolis, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2023</div>
+          <div class="exhibition-name"><em>VERA + VERAS</em></div>
+          <div class="exhibition-place">
+            Edifício Vera · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2022</div>
+          <div class="exhibition-name"><em>Infinitos Campos Gerais II</em></div>
+          <div class="exhibition-place">
+            Campo das Artes · Balsa Nova / São Luiz do Purunã, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2022</div>
+          <div class="exhibition-name"><em>Sou Patrono_Acervo</em></div>
+          <div class="exhibition-place">
+            MON – Museu Oscar Niemeyer · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2021</div>
+          <div class="exhibition-name"><em>Afinidades</em></div>
+          <div class="exhibition-place">
+            MON – Museu Oscar Niemeyer · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2021</div>
+          <div class="exhibition-name"><em>A Razão dos Loucos</em></div>
+          <div class="exhibition-place">
+            SOMA Galeria · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2021</div>
+          <div class="exhibition-name"><em>A Razão dos Loucos</em></div>
+          <div class="exhibition-place">
+            Mamute Galeria · Porto Alegre, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2021</div>
+          <div class="exhibition-name"><em>Oceano de Incertezas</em></div>
+          <div class="exhibition-place">
+            SOMA Galeria · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2021</div>
+          <div class="exhibition-name"><em>A Razão dos Loucos</em></div>
+          <div class="exhibition-place">
+            Lona Galeria · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2021</div>
+          <div class="exhibition-name"><em>ArtRio</em></div>
+          <div class="exhibition-place">
+            SOMA Galeria · Marina da Glória · Rio de Janeiro, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2020</div>
+          <div class="exhibition-name"><em>PIPA em casa</em></div>
+          <div class="exhibition-place">
+            Prêmio PIPA · Online
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2019</div>
+          <div class="exhibition-name"><em>Geraldo Leão — Declaração de Princípios</em></div>
+          <div class="exhibition-place">
+            MON – Museu Oscar Niemeyer · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2019</div>
+          <div class="exhibition-name"><em>ArtRio</em></div>
+          <div class="exhibition-place">
+            SOMA Galeria · Marina da Glória · Rio de Janeiro, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2019</div>
+          <div class="exhibition-name"><em>Com Título e Sem Título, Técnicas e Dimensões Variadas</em></div>
+          <div class="exhibition-place">
+            MON – Museu Oscar Niemeyer · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2018</div>
+          <div class="exhibition-name"><em>GAMA</em></div>
+          <div class="exhibition-place">
+            SOMA Galeria · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2018</div>
+          <div class="exhibition-name"><em>Queermuseu: Cartografias da diferença na arte brasileira</em></div>
+          <div class="exhibition-place">
+            Cavalariças – Escola de Artes Visuais do Parque Lage · Rio de Janeiro, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2018</div>
+          <div class="exhibition-name"><em>SP-Arte</em></div>
+          <div class="exhibition-place">
+            SIM Galeria · Pavilhão da Bienal · São Paulo, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2018</div>
+          <div class="exhibition-name"><em>Cada vez mais perto</em></div>
+          <div class="exhibition-place">
+            Edifício Santa Rosa · Praça Tiradentes · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2018</div>
+          <div class="exhibition-name"><em>Infinitos Campos Gerais</em></div>
+          <div class="exhibition-place">
+            Fazenda Capão Alto · Patrimônio Cultural · Castro, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2017</div>
+          <div class="exhibition-name"><em>Queermuseu: Cartografias da diferença na arte brasileira</em></div>
+          <div class="exhibition-place">
+            Santander Cultural · Porto Alegre, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2017</div>
+          <div class="exhibition-name"><em>PINTURA [diálogo de artistas]</em></div>
+          <div class="exhibition-place">
+            Caixa Cultural · Rio de Janeiro, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2016</div>
+          <div class="exhibition-name"><em>19º Edital de Incentivo à Produção Chico Lisboa</em></div>
+          <div class="exhibition-place">
+            MARGS · Porto Alegre, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2015</div>
+          <div class="exhibition-name"><em>Berliner Liste — Art Fair</em></div>
+          <div class="exhibition-place">
+            Boiler Gallery · Berlin, Germany
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2015</div>
+          <div class="exhibition-name"><em>aí estão elas que se diz já foram e nunca faltam</em></div>
+          <div class="exhibition-place">
+            Galeria Casa Imagem · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2015</div>
+          <div class="exhibition-name"><em>40º SARP — Salão de Arte de Ribeirão Preto</em></div>
+          <div class="exhibition-place">
+            MARP · Ribeirão Preto, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2015</div>
+          <div class="exhibition-name"><em>LIMIAR</em></div>
+          <div class="exhibition-place">
+            SIM Galeria · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2014</div>
+          <div class="exhibition-name"><em>Para além dos sóis de outros sistemas e astros remotos</em></div>
+          <div class="exhibition-place">
+            Atelier SOMA · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2014</div>
+          <div class="exhibition-name"><em>Qu’est-ce que c’est la photographie?</em></div>
+          <div class="exhibition-place">
+            Galeria Casa da Imagem · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2013</div>
+          <div class="exhibition-name"><em>Construções de Ilusão</em></div>
+          <div class="exhibition-place">
+            Bienal Internacional de Curitiba · SESC Paço da Liberdade · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2012</div>
+          <div class="exhibition-name"><em>9</em></div>
+          <div class="exhibition-place">
+            Museu de Arte da Universidade Federal do Paraná – MusA · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2011</div>
+          <div class="exhibition-name"><em>CARAMBOLAGE</em></div>
+          <div class="exhibition-place">
+            Studio LUXLAB · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2011</div>
+          <div class="exhibition-name"><em>Grupo de Pintura Geraldo Leão</em></div>
+          <div class="exhibition-place">
+            DeArtes – Universidade Federal do Paraná · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2008</div>
+          <div class="exhibition-name"><em>Possíveis Conexões</em></div>
+          <div class="exhibition-place">
+            Museu de Arte Contemporânea do Paraná – MAC · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2008</div>
+          <div class="exhibition-name"><em>Intervenção urbana</em></div>
+          <div class="exhibition-place">
+            Museu Metropolitano de Arte de Curitiba – MUMA · Curitiba, Brazil
+          </div>
+        </div>
+
+        <div class="exhibition">
+          <div class="exhibition-year">2007</div>
+          <div class="exhibition-name"><em>Múltiplos</em></div>
+          <div class="exhibition-place">
+            Museu Alfredo Andersen · Curitiba, Brazil
+          </div>
+        </div>
+
+      </div>
+
     </section>
+
+
+    <!-- FOOTNOTE -->
+
+    <section class="exhibitions-section" style="padding-top: 70px;">
+
+      <div class="exhibitions-section-header">
+
+        <div class="exhibitions-section-label">
+          Archive
+        </div>
+
+        <div class="exhibitions-section-title">
+          Complete exhibition history
+        </div>
+
+      </div>
+
+      <p style="
+        max-width: 650px;
+        font-size: 14px;
+        line-height: 1.6;
+        color: #777;
+        margin: 0;
+      ">
+        A complete curriculum vitae, including residencies, awards,
+        institutional collections and additional professional activities,
+        is available on the <a href="cv.html">CV</a> page.
+      </p>
+
+    </section>
+
   </div>
+
 </main>
+
+
 <footer>
+
   <div class="footer-inner">
-    <div>Willian Santos<br>Florianópolis · Brazil</div>
-    <div class="footer-links"><a href="mailto:contact@williansantos.com">Email</a><a href="https://www.instagram.com/williansantos_studio/" target="_blank" rel="noopener">Instagram</a></div>
-    <div class="footer-copy">© 2026 Willian Santos</div>
+
+    <div>
+      Willian Santos<br>
+      Florianópolis · Brazil
+    </div>
+
+    <div class="footer-links">
+      <a href="mailto:contact@williansantos.com">Email</a>
+
+      <a
+        href="https://www.instagram.com/williansantos_studio/"
+        target="_blank"
+        rel="noopener"
+      >
+        Instagram
+      </a>
+    </div>
+
+    <div class="footer-copy">
+      © 2026 Willian Santos
+    </div>
+
   </div>
+
 </footer>
+
 </body>
 </html>
